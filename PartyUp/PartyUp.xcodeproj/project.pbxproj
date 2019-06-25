@@ -72,7 +72,6 @@
 				F8A3FE182295508700FD2475 /* PartyUp */,
 				F8A3FE302295508800FD2475 /* PartyUpTests */,
 				F8A3FE172295508700FD2475 /* Products */,
-				F8A3FE3C22958F1600FD2475 /* EventCell.swift */,
 			);
 			sourceTree = "<group>";
 		};
@@ -93,6 +92,7 @@
 				F8A3FE192295508700FD2475 /* AppDelegate.swift */,
 				7A8F9CFC22C290D700AB3B70 /* GradientView.swift */,
 				F8A3FE1B2295508700FD2475 /* ViewController.swift */,
+				F8A3FE3C22958F1600FD2475 /* EventCell.swift */,
 				F8A3FE1D2295508700FD2475 /* Main.storyboard */,
 				F8A3FE232295508800FD2475 /* Assets.xcassets */,
 				F8A3FE252295508800FD2475 /* LaunchScreen.storyboard */,
