@@ -26,7 +26,7 @@ class ViewController: UIViewController{
     
 }
 
-extension ViewController: UICollectionViewDataSource{
+extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 10
     }
@@ -34,8 +34,6 @@ extension ViewController: UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "eventCell", for: indexPath) as! EventCell
         cell.eventImage.image = UIImage(named: "event1.jpg")
-        
-
         return cell
     }
     
@@ -43,6 +41,13 @@ extension ViewController: UICollectionViewDataSource{
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
-
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let cell = eventCollectionView.cellForItem(at: indexPath)
+        eventCollectionView.deselectItem(at: indexPath, animated: true)
+        
+        performSegue(withIdentifier: "toEventDetails", sender: cell)
+    }
+    
 }
 

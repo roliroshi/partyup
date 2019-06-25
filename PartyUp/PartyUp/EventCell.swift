@@ -13,6 +13,5 @@ class EventCell: UICollectionViewCell {
     
     @IBOutlet weak var eventImage: UIImageView!
     
-    @IBOutlet weak var eventColor: UIView!
     
 }
