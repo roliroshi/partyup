@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A8F9CFD22C290D700AB3B70 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8F9CFC22C290D700AB3B70 /* GradientView.swift */; };
 		F8A3FE1A2295508700FD2475 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A3FE192295508700FD2475 /* AppDelegate.swift */; };
 		F8A3FE1C2295508700FD2475 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A3FE1B2295508700FD2475 /* ViewController.swift */; };
 		F8A3FE1F2295508700FD2475 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8A3FE1D2295508700FD2475 /* Main.storyboard */; };
@@ -30,6 +31,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7A8F9CFC22C290D700AB3B70 /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GradientView.swift; path = "../../../../../../Downloads/Gradient-View-master/GradientView.swift"; sourceTree = "<group>"; };
 		F8A3FE162295508700FD2475 /* PartyUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PartyUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8A3FE192295508700FD2475 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F8A3FE1B2295508700FD2475 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 				F8A3FE182295508700FD2475 /* PartyUp */,
 				F8A3FE302295508800FD2475 /* PartyUpTests */,
 				F8A3FE172295508700FD2475 /* Products */,
+				F8A3FE3C22958F1600FD2475 /* EventCell.swift */,
 			);
 			sourceTree = "<group>";
 		};
@@ -88,9 +91,9 @@
 				F8D28C3D22C27E4E00143A4B /* event1.jpg */,
 				F8A3FE3E22959BAA00FD2475 /* imp.jpg */,
 				F8A3FE192295508700FD2475 /* AppDelegate.swift */,
+				7A8F9CFC22C290D700AB3B70 /* GradientView.swift */,
 				F8A3FE1B2295508700FD2475 /* ViewController.swift */,
 				F8A3FE1D2295508700FD2475 /* Main.storyboard */,
-				F8A3FE3C22958F1600FD2475 /* EventCell.swift */,
 				F8A3FE232295508800FD2475 /* Assets.xcassets */,
 				F8A3FE252295508800FD2475 /* LaunchScreen.storyboard */,
 				F8A3FE282295508800FD2475 /* Info.plist */,
@@ -213,6 +216,7 @@
 			files = (
 				F8A3FE3D22958F1600FD2475 /* EventCell.swift in Sources */,
 				F8A3FE1C2295508700FD2475 /* ViewController.swift in Sources */,
+				7A8F9CFD22C290D700AB3B70 /* GradientView.swift in Sources */,
 				F8A3FE222295508700FD2475 /* PartyUp.xcdatamodeld in Sources */,
 				F8A3FE1A2295508700FD2475 /* AppDelegate.swift in Sources */,
 			);
