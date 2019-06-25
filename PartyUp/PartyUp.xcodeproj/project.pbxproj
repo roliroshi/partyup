@@ -16,6 +16,7 @@
 		F8A3FE322295508800FD2475 /* PartyUpTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A3FE312295508800FD2475 /* PartyUpTests.swift */; };
 		F8A3FE3D22958F1600FD2475 /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A3FE3C22958F1600FD2475 /* EventCell.swift */; };
 		F8A3FE3F22959BAA00FD2475 /* imp.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F8A3FE3E22959BAA00FD2475 /* imp.jpg */; };
+		F8D28C3E22C27E4E00143A4B /* event1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F8D28C3D22C27E4E00143A4B /* event1.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		F8A3FE332295508800FD2475 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F8A3FE3C22958F1600FD2475 /* EventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCell.swift; sourceTree = "<group>"; };
 		F8A3FE3E22959BAA00FD2475 /* imp.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = imp.jpg; sourceTree = "<group>"; };
+		F8D28C3D22C27E4E00143A4B /* event1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = event1.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 		F8A3FE182295508700FD2475 /* PartyUp */ = {
 			isa = PBXGroup;
 			children = (
+				F8D28C3D22C27E4E00143A4B /* event1.jpg */,
 				F8A3FE3E22959BAA00FD2475 /* imp.jpg */,
 				F8A3FE192295508700FD2475 /* AppDelegate.swift */,
 				F8A3FE1B2295508700FD2475 /* ViewController.swift */,
@@ -186,6 +189,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8D28C3E22C27E4E00143A4B /* event1.jpg in Resources */,
 				F8A3FE3F22959BAA00FD2475 /* imp.jpg in Resources */,
 				F8A3FE272295508800FD2475 /* LaunchScreen.storyboard in Resources */,
 				F8A3FE242295508800FD2475 /* Assets.xcassets in Resources */,

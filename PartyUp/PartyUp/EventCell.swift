@@ -8,11 +8,10 @@
 
 import UIKit
 
-class EventCell: UITableViewCell {
+class EventCell: UICollectionViewCell {
     
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var dateLabel: UILabel!
-    @IBOutlet weak var nameLabel: UILabel!
+    
+    @IBOutlet weak var eventImage: UIImageView!
     
     
 }
