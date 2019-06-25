@@ -34,6 +34,8 @@ extension ViewController: UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "eventCell", for: indexPath) as! EventCell
         cell.eventImage.image = UIImage(named: "event1.jpg")
+        
+
         return cell
     }
     
@@ -41,5 +43,6 @@ extension ViewController: UICollectionViewDataSource{
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
+
 }
 
