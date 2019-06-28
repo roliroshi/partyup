@@ -33,7 +33,7 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate{
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "eventCell", for: indexPath) as! EventCell
-        cell.eventImage.image = UIImage(named: "event1.jpg")
+        cell.eventImage.image = UIImage(named: "applelogo.jpg")
         return cell
     }
     

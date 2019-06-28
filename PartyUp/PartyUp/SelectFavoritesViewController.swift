@@ -10,26 +10,23 @@ import UIKit
 
 class SelectFavoritesViewController: UIViewController {
     @IBOutlet weak var clubsCollectionView: UICollectionView!
-    let cellScale: CGFloat = 0.6
+    let cellScale: CGFloat = 0.8
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        /*
+        let layout = clubsCollectionView!.collectionViewLayout as! UICollectionViewFlowLayout
         
-        
-        
-        
-        /*Keine Ahnung was dieser Teil tut
         let screenSize = UIScreen.main.bounds.size
         let cellWidth = floor(screenSize.width * cellScale)
-        let cellHeight = floor(screenSize.height * cellScale)
+        let cellHeight = layout.itemSize.height
         let insetX = (view.bounds.width - cellWidth) / 2.0
         let insetY = (view.bounds.height - cellHeight) / 2.0
         
-        let layout = clubsCollectionView!.collectionViewLayout as! UICollectionViewFlowLayout
+        
         layout.itemSize = CGSize(width: cellWidth, height: cellHeight)
         clubsCollectionView.contentInset = UIEdgeInsets(top: insetY, left: insetX, bottom: insetY, right: insetX)
-        //verwirrender Code ende */
-        
+        */
         
         clubsCollectionView.dataSource = self
         clubsCollectionView.delegate = self
@@ -44,7 +41,7 @@ extension SelectFavoritesViewController: UICollectionViewDataSource{
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "clubCell", for: indexPath) as! ClubCell
-        cell.layer.cornerRadius = 25
+        cell.layer.cornerRadius = 49
         
         return cell
     }

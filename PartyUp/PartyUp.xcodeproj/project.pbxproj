@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7A2A67CC22C2CCB50089BE3B /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2A67CB22C2CCB40089BE3B /* GradientView.swift */; };
+		F84E71B322C4BB6B0059E1CA /* applelogo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F84E71B222C4BB6B0059E1CA /* applelogo.jpg */; };
 		F8A3FE1A2295508700FD2475 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A3FE192295508700FD2475 /* AppDelegate.swift */; };
 		F8A3FE1C2295508700FD2475 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A3FE1B2295508700FD2475 /* ViewController.swift */; };
 		F8A3FE1F2295508700FD2475 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8A3FE1D2295508700FD2475 /* Main.storyboard */; };
@@ -39,6 +40,7 @@
 
 /* Begin PBXFileReference section */
 		7A2A67CB22C2CCB40089BE3B /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		F84E71B222C4BB6B0059E1CA /* applelogo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = applelogo.jpg; sourceTree = "<group>"; };
 		F8A3FE162295508700FD2475 /* PartyUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PartyUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8A3FE192295508700FD2475 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F8A3FE1B2295508700FD2475 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 				F8A3FE1B2295508700FD2475 /* ViewController.swift */,
 				F8DCE82022C3AC9900410CAB /* BeFunky-photo.jpg */,
 				F8A3FE1D2295508700FD2475 /* Main.storyboard */,
+				F84E71B222C4BB6B0059E1CA /* applelogo.jpg */,
 				F8DCE81822C3565200410CAB /* SelectFavoritesViewController.swift */,
 				F8DCE81622C29B3500410CAB /* EventViewController.swift */,
 				F8A3FE3C22958F1600FD2475 /* EventCell.swift */,
@@ -214,6 +217,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8D28C3E22C27E4E00143A4B /* event1.jpg in Resources */,
+				F84E71B322C4BB6B0059E1CA /* applelogo.jpg in Resources */,
 				F8A3FE3F22959BAA00FD2475 /* imp.jpg in Resources */,
 				F8A3FE272295508800FD2475 /* LaunchScreen.storyboard in Resources */,
 				F8B334FC22C3CA7300BB6790 /* launch.png in Resources */,
