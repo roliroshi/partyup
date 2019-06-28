@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7A2A67CC22C2CCB50089BE3B /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2A67CB22C2CCB40089BE3B /* GradientView.swift */; };
+		7A98F3E422C66E53001B6CDE /* applelogo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7A98F3E322C66E53001B6CDE /* applelogo.jpg */; };
 		F84E71B322C4BB6B0059E1CA /* applelogo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F84E71B222C4BB6B0059E1CA /* applelogo.jpg */; };
 		F869D0A622C6728E00E2F650 /* a1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F869D09D22C6728E00E2F650 /* a1.jpg */; };
 		F869D0A722C6728E00E2F650 /* feeling.png in Resources */ = {isa = PBXBuildFile; fileRef = F869D09E22C6728E00E2F650 /* feeling.png */; };
@@ -49,6 +50,7 @@
 
 /* Begin PBXFileReference section */
 		7A2A67CB22C2CCB40089BE3B /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		7A98F3E322C66E53001B6CDE /* applelogo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = applelogo.jpg; sourceTree = "<group>"; };
 		F84E71B222C4BB6B0059E1CA /* applelogo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = applelogo.jpg; sourceTree = "<group>"; };
 		F869D09D22C6728E00E2F650 /* a1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = a1.jpg; sourceTree = "<group>"; };
 		F869D09E22C6728E00E2F650 /* feeling.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = feeling.png; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 				F869D09C22C6728D00E2F650 /* club logos */,
 				F8D28C3D22C27E4E00143A4B /* event1.jpg */,
 				F8A3FE3E22959BAA00FD2475 /* imp.jpg */,
+				7A98F3E322C66E53001B6CDE /* applelogo.jpg */,
 				F8DCE81C22C3A13000410CAB /* bg.jpg */,
 				7A2A67CB22C2CCB40089BE3B /* GradientView.swift */,
 				F8A3FE192295508700FD2475 /* AppDelegate.swift */,
@@ -268,6 +271,7 @@
 				F8DCE81D22C3A13100410CAB /* bg.jpg in Resources */,
 				F869D0AC22C6728E00E2F650 /* mausefalle.jpg in Resources */,
 				F869D0AA22C6728E00E2F650 /* evers.jpg in Resources */,
+				7A98F3E422C66E53001B6CDE /* applelogo.jpg in Resources */,
 				F8A3FE1F2295508700FD2475 /* Main.storyboard in Resources */,
 				F869D0AE22C6728E00E2F650 /* remembar.jpg in Resources */,
 			);
