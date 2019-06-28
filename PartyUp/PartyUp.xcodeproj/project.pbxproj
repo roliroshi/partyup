@@ -9,6 +9,15 @@
 /* Begin PBXBuildFile section */
 		7A2A67CC22C2CCB50089BE3B /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2A67CB22C2CCB40089BE3B /* GradientView.swift */; };
 		F84E71B322C4BB6B0059E1CA /* applelogo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F84E71B222C4BB6B0059E1CA /* applelogo.jpg */; };
+		F869D0A622C6728E00E2F650 /* a1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F869D09D22C6728E00E2F650 /* a1.jpg */; };
+		F869D0A722C6728E00E2F650 /* feeling.png in Resources */ = {isa = PBXBuildFile; fileRef = F869D09E22C6728E00E2F650 /* feeling.png */; };
+		F869D0A822C6728E00E2F650 /* imperio.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F869D09F22C6728E00E2F650 /* imperio.jpg */; };
+		F869D0A922C6728E00E2F650 /* empire.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F869D0A022C6728E00E2F650 /* empire.jpg */; };
+		F869D0AA22C6728E00E2F650 /* evers.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F869D0A122C6728E00E2F650 /* evers.jpg */; };
+		F869D0AB22C6728E00E2F650 /* segabar.png in Resources */ = {isa = PBXBuildFile; fileRef = F869D0A222C6728E00E2F650 /* segabar.png */; };
+		F869D0AC22C6728E00E2F650 /* mausefalle.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F869D0A322C6728E00E2F650 /* mausefalle.jpg */; };
+		F869D0AD22C6728E00E2F650 /* spielplatz.png in Resources */ = {isa = PBXBuildFile; fileRef = F869D0A422C6728E00E2F650 /* spielplatz.png */; };
+		F869D0AE22C6728E00E2F650 /* remembar.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F869D0A522C6728E00E2F650 /* remembar.jpg */; };
 		F8A3FE1A2295508700FD2475 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A3FE192295508700FD2475 /* AppDelegate.swift */; };
 		F8A3FE1C2295508700FD2475 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A3FE1B2295508700FD2475 /* ViewController.swift */; };
 		F8A3FE1F2295508700FD2475 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8A3FE1D2295508700FD2475 /* Main.storyboard */; };
@@ -41,6 +50,15 @@
 /* Begin PBXFileReference section */
 		7A2A67CB22C2CCB40089BE3B /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		F84E71B222C4BB6B0059E1CA /* applelogo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = applelogo.jpg; sourceTree = "<group>"; };
+		F869D09D22C6728E00E2F650 /* a1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = a1.jpg; sourceTree = "<group>"; };
+		F869D09E22C6728E00E2F650 /* feeling.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = feeling.png; sourceTree = "<group>"; };
+		F869D09F22C6728E00E2F650 /* imperio.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = imperio.jpg; sourceTree = "<group>"; };
+		F869D0A022C6728E00E2F650 /* empire.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = empire.jpg; sourceTree = "<group>"; };
+		F869D0A122C6728E00E2F650 /* evers.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = evers.jpg; sourceTree = "<group>"; };
+		F869D0A222C6728E00E2F650 /* segabar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = segabar.png; sourceTree = "<group>"; };
+		F869D0A322C6728E00E2F650 /* mausefalle.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mausefalle.jpg; sourceTree = "<group>"; };
+		F869D0A422C6728E00E2F650 /* spielplatz.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spielplatz.png; sourceTree = "<group>"; };
+		F869D0A522C6728E00E2F650 /* remembar.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = remembar.jpg; sourceTree = "<group>"; };
 		F8A3FE162295508700FD2475 /* PartyUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PartyUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8A3FE192295508700FD2475 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F8A3FE1B2295508700FD2475 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -82,6 +100,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F869D09C22C6728D00E2F650 /* club logos */ = {
+			isa = PBXGroup;
+			children = (
+				F869D09D22C6728E00E2F650 /* a1.jpg */,
+				F869D09E22C6728E00E2F650 /* feeling.png */,
+				F869D09F22C6728E00E2F650 /* imperio.jpg */,
+				F869D0A022C6728E00E2F650 /* empire.jpg */,
+				F869D0A122C6728E00E2F650 /* evers.jpg */,
+				F869D0A222C6728E00E2F650 /* segabar.png */,
+				F869D0A322C6728E00E2F650 /* mausefalle.jpg */,
+				F869D0A422C6728E00E2F650 /* spielplatz.png */,
+				F869D0A522C6728E00E2F650 /* remembar.jpg */,
+			);
+			path = "club logos";
+			sourceTree = "<group>";
+		};
 		F8A3FE0D2295508700FD2475 = {
 			isa = PBXGroup;
 			children = (
@@ -104,6 +138,7 @@
 		F8A3FE182295508700FD2475 /* PartyUp */ = {
 			isa = PBXGroup;
 			children = (
+				F869D09C22C6728D00E2F650 /* club logos */,
 				F8D28C3D22C27E4E00143A4B /* event1.jpg */,
 				F8A3FE3E22959BAA00FD2475 /* imp.jpg */,
 				F8DCE81C22C3A13000410CAB /* bg.jpg */,
@@ -219,13 +254,22 @@
 				F8D28C3E22C27E4E00143A4B /* event1.jpg in Resources */,
 				F84E71B322C4BB6B0059E1CA /* applelogo.jpg in Resources */,
 				F8A3FE3F22959BAA00FD2475 /* imp.jpg in Resources */,
+				F869D0AD22C6728E00E2F650 /* spielplatz.png in Resources */,
+				F869D0AB22C6728E00E2F650 /* segabar.png in Resources */,
 				F8A3FE272295508800FD2475 /* LaunchScreen.storyboard in Resources */,
+				F869D0A722C6728E00E2F650 /* feeling.png in Resources */,
 				F8B334FC22C3CA7300BB6790 /* launch.png in Resources */,
 				F8DCE82122C3AC9900410CAB /* BeFunky-photo.jpg in Resources */,
+				F869D0A822C6728E00E2F650 /* imperio.jpg in Resources */,
 				F8A3FE242295508800FD2475 /* Assets.xcassets in Resources */,
+				F869D0A922C6728E00E2F650 /* empire.jpg in Resources */,
+				F869D0A622C6728E00E2F650 /* a1.jpg in Resources */,
 				F8DCE81F22C3A70700410CAB /* heart.png in Resources */,
 				F8DCE81D22C3A13100410CAB /* bg.jpg in Resources */,
+				F869D0AC22C6728E00E2F650 /* mausefalle.jpg in Resources */,
+				F869D0AA22C6728E00E2F650 /* evers.jpg in Resources */,
 				F8A3FE1F2295508700FD2475 /* Main.storyboard in Resources */,
+				F869D0AE22C6728E00E2F650 /* remembar.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

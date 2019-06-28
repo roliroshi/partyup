@@ -310,6 +310,14 @@
                                                 <integer key="value" value="20"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="clubCity" destination="qmF-gm-eaa" id="nYd-hE-p1M"/>
+                                            <outlet property="clubName" destination="55f-rj-Gdq" id="bQd-K6-Iva"/>
+                                            <outlet property="clubStreet" destination="95X-cL-hGF" id="7zu-5b-45D"/>
+                                            <outlet property="clubType" destination="dHu-sP-utZ" id="Qik-vc-E3R"/>
+                                            <outlet property="logoImage" destination="fSo-nD-uOM" id="Eds-SE-Jxq"/>
+                                            <outlet property="ratingLabel" destination="xey-Xa-PIr" id="VuL-cI-M8N"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -367,7 +375,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NKw-5B-DkP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-984" y="21"/>
+            <point key="canvasLocation" x="-984.05797101449286" y="20.758928571428569"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="BjX-wZ-7Z5">

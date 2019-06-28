@@ -8,7 +8,23 @@
 
 import UIKit
 
+struct Club {
+    
+    let name: String
+    let type: String
+    let rating: String
+    let street: String
+    let city: String
+    let logo: UIImage
+}
+
 class ClubCell: UICollectionViewCell{
     
+    @IBOutlet weak var logoImage: UIImageView!
+    @IBOutlet weak var clubName: UILabel!
+    @IBOutlet weak var clubType: UILabel!
+    @IBOutlet weak var ratingLabel: UILabel!
+    @IBOutlet weak var clubStreet: UILabel!
+    @IBOutlet weak var clubCity: UILabel!
     
 }
