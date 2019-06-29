@@ -8,10 +8,15 @@
 
 import UIKit
 
+
 class EventCell: UICollectionViewCell {
     
     
     @IBOutlet weak var eventImage: UIImageView!
+    @IBOutlet weak var eventName: UILabel!
+    @IBOutlet weak var clubName: UILabel!
+    @IBOutlet weak var date: UILabel!
+    @IBOutlet weak var clubLogo: UIImageView!
     
     
 }

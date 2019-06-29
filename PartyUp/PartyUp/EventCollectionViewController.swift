@@ -1,16 +1,22 @@
 //
-//  EventViewController.swift
+//  EventCollectionViewController.swift
 //  PartyUp
 //
-//  Created by roli on 25.06.19.
+//  Created by roli on 29.06.19.
 //  Copyright © 2019 roli. All rights reserved.
 //
 
 import UIKit
 
-class EventViewController: UIViewController{
+class EventCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout{
+    
+    fileprivate let cellId = "cellId"
+    fileprivate let headerId = "headerId"
+    fileprivate let padding: CGFloat = 16
+    
+    var headerView: HeaderView?
+    var eventImage: UIImageView!
 
-    @IBOutlet weak var eventImage: UIImageView!
     
     
     let zoomImageView = UIImageView()
@@ -18,14 +24,41 @@ class EventViewController: UIViewController{
     let navBarCoverView = UIView()
     let tabBarCoverView = UIView()
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-    
-        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
-        eventImage.isUserInteractionEnabled = true
-        eventImage.addGestureRecognizer(tapGestureRecognizer)
+        
+        
+        setupLayout()
+        setupCollectionView()
+        
+      
+        
     }
     
+    override func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let contentOffsetY = scrollView.contentOffset.y
+        
+        if contentOffsetY > 0 {
+            headerView?.animator.fractionComplete = 0
+            return
+        }
+        
+        headerView?.animator.fractionComplete = abs(contentOffsetY) / 1000
+    }
+
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
+    fileprivate func setupLayout() {
+        //layout customization
+        if let layout = collectionViewLayout as? UICollectionViewFlowLayout {
+            
+            layout.sectionInset = .init(top: padding, left: padding, bottom: padding, right: padding)
+        }
+    }
     @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer)
     {
         let tappedImage = tapGestureRecognizer.view as! UIImageView
@@ -110,4 +143,43 @@ class EventViewController: UIViewController{
         }
     }
     
+    fileprivate func setupCollectionView() {
+        collectionView.backgroundColor = .black
+        collectionView.contentInsetAdjustmentBehavior = .never
+        
+        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: cellId)
+        
+        collectionView.register(HeaderView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: headerId)
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: headerId, for: indexPath) as? HeaderView
+        
+        eventImage = headerView?.imageView
+        
+          let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
+        eventImage.isUserInteractionEnabled = true
+        eventImage.addGestureRecognizer(tapGestureRecognizer)
+        return headerView!
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+       print("headerr")
+        return .init(width: view.frame.width, height: 340)
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "fullEventCell", for: indexPath)
+        //cell.backgroundColor = .black
+        return cell
+    }
+    
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return .init(width: view.frame.width, height: 1000)
+    }
 }

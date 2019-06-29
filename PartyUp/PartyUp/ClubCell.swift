@@ -8,15 +8,7 @@
 
 import UIKit
 
-struct Club {
-    
-    let name: String
-    let type: String
-    let rating: String
-    let street: String
-    let city: String
-    let logo: UIImage
-}
+
 
 class ClubCell: UICollectionViewCell{
     

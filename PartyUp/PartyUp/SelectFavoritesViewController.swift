@@ -12,13 +12,13 @@ class SelectFavoritesViewController: UIViewController {
     @IBOutlet weak var clubsCollectionView: UICollectionView!
     let cellScale: CGFloat = 0.8
     
-    var clubs: [Club] = []
+    var clubs: [Club] = DataManager.clubs
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        loadClubs()
+       // loadClubs()
         
         /*
         let layout = clubsCollectionView!.collectionViewLayout as! UICollectionViewFlowLayout
@@ -38,6 +38,7 @@ class SelectFavoritesViewController: UIViewController {
         clubsCollectionView.delegate = self
     }
     
+    /*
     func loadClubs() {
         self.clubs = [
             Club(name: "Musikpark A1", type: "Club", rating: "★ 4.7", street: "Hamerlingstraße 42", city: "4020 Linz", logo: UIImage(named: "a1.jpg") ?? UIImage(named: "applelogo.jpg")!),
@@ -50,7 +51,7 @@ class SelectFavoritesViewController: UIViewController {
             Club(name: "Evers", type: "Club", rating: "★ 4.0", street: "Betriebsstraße 15", city: "4210 Radingdorf", logo: UIImage(named: "evers.jpg") ?? UIImage(named: "empire.jpg")!),
             Club(name: "Mausefalle", type: "Bar", rating: "★ 4.0", street: "Wegscheider Str. 3", city: "4020 Linz", logo: UIImage(named: "mausefalle.jpg") ?? UIImage(named: "empire.jpg")!)
         ]
-    }
+    } */
     
 }
 
