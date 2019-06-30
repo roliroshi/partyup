@@ -35,7 +35,9 @@ class EventCollectionViewController: UICollectionViewController, UICollectionVie
         setupCollectionView()
     }
     
-   
+    override func viewWillDisappear(_ animated: Bool) {
+        headerView?.animator.stopAnimation(true)
+    }
     
     override func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let contentOffsetY = scrollView.contentOffset.y
