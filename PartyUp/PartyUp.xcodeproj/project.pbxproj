@@ -3,12 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		70C320B0FEA955593CA48DDD /* libPods-PartyUp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D8292A60442479084FE47192 /* libPods-PartyUp.a */; };
 		7A2A67CC22C2CCB50089BE3B /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2A67CB22C2CCB40089BE3B /* GradientView.swift */; };
 		7A98F3E422C66E53001B6CDE /* applelogo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7A98F3E322C66E53001B6CDE /* applelogo.jpg */; };
+		7AA2339322C9069A00D30931 /* mapStyle.json in Resources */ = {isa = PBXBuildFile; fileRef = 7AA2339122C9069900D30931 /* mapStyle.json */; };
+		7AA2339422C9069A00D30931 /* MapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA2339222C9069A00D30931 /* MapsViewController.swift */; };
 		F84E71B322C4BB6B0059E1CA /* applelogo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F84E71B222C4BB6B0059E1CA /* applelogo.jpg */; };
 		F869D0A622C6728E00E2F650 /* a1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F869D09D22C6728E00E2F650 /* a1.jpg */; };
 		F869D0A722C6728E00E2F650 /* feeling.png in Resources */ = {isa = PBXBuildFile; fileRef = F869D09E22C6728E00E2F650 /* feeling.png */; };
@@ -60,8 +63,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		39148667BD758B0BE259928F /* Pods-PartyUp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PartyUp.release.xcconfig"; path = "Target Support Files/Pods-PartyUp/Pods-PartyUp.release.xcconfig"; sourceTree = "<group>"; };
+		780E766350C9A1003E056B91 /* Pods-PartyUp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PartyUp.debug.xcconfig"; path = "Target Support Files/Pods-PartyUp/Pods-PartyUp.debug.xcconfig"; sourceTree = "<group>"; };
 		7A2A67CB22C2CCB40089BE3B /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		7A98F3E322C66E53001B6CDE /* applelogo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = applelogo.jpg; sourceTree = "<group>"; };
+		7AA2339122C9069900D30931 /* mapStyle.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = mapStyle.json; sourceTree = "<group>"; };
+		7AA2339222C9069A00D30931 /* MapsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapsViewController.swift; sourceTree = "<group>"; };
+		D8292A60442479084FE47192 /* libPods-PartyUp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PartyUp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F84E71B222C4BB6B0059E1CA /* applelogo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = applelogo.jpg; sourceTree = "<group>"; };
 		F869D09D22C6728E00E2F650 /* a1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = a1.jpg; sourceTree = "<group>"; };
 		F869D09E22C6728E00E2F650 /* feeling.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = feeling.png; sourceTree = "<group>"; };
@@ -111,6 +119,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70C320B0FEA955593CA48DDD /* libPods-PartyUp.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -124,6 +133,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A8753B37D5EEC5B60F1B5272 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D8292A60442479084FE47192 /* libPods-PartyUp.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F3F8261FD9BC51283E3EB45D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				780E766350C9A1003E056B91 /* Pods-PartyUp.debug.xcconfig */,
+				39148667BD758B0BE259928F /* Pods-PartyUp.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		F869D09C22C6728D00E2F650 /* club logos */ = {
 			isa = PBXGroup;
 			children = (
@@ -160,6 +186,8 @@
 				F8B334FB22C3CA7200BB6790 /* launch.png */,
 				F8A3FE302295508800FD2475 /* PartyUpTests */,
 				F8A3FE172295508700FD2475 /* Products */,
+				F3F8261FD9BC51283E3EB45D /* Pods */,
+				A8753B37D5EEC5B60F1B5272 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -182,6 +210,8 @@
 				F8DCE81C22C3A13000410CAB /* bg.jpg */,
 				7A2A67CB22C2CCB40089BE3B /* GradientView.swift */,
 				F8A3FE192295508700FD2475 /* AppDelegate.swift */,
+				7AA2339122C9069900D30931 /* mapStyle.json */,
+				7AA2339222C9069A00D30931 /* MapsViewController.swift */,
 				F8DCE81E22C3A70700410CAB /* heart.png */,
 				F8A3FE1B2295508700FD2475 /* ViewController.swift */,
 				F8DCE82022C3AC9900410CAB /* BeFunky-photo.jpg */,
@@ -221,9 +251,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F8A3FE362295508800FD2475 /* Build configuration list for PBXNativeTarget "PartyUp" */;
 			buildPhases = (
+				9B0570C754045685D9B4549F /* [CP] Check Pods Manifest.lock */,
 				F8A3FE122295508700FD2475 /* Sources */,
 				F8A3FE132295508700FD2475 /* Frameworks */,
 				F8A3FE142295508700FD2475 /* Resources */,
+				F12AE2C146B5904D6B3141BF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -304,6 +336,7 @@
 				F869D0AB22C6728E00E2F650 /* segabar.png in Resources */,
 				F8A3FE272295508800FD2475 /* LaunchScreen.storyboard in Resources */,
 				F869D0A722C6728E00E2F650 /* feeling.png in Resources */,
+				7AA2339322C9069A00D30931 /* mapStyle.json in Resources */,
 				F8B334FC22C3CA7300BB6790 /* launch.png in Resources */,
 				F880DBEF22C6AC950093A901 /* event4.jpg in Resources */,
 				F8DCE82122C3AC9900410CAB /* BeFunky-photo.jpg in Resources */,
@@ -333,6 +366,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		9B0570C754045685D9B4549F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PartyUp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F12AE2C146B5904D6B3141BF /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PartyUp/Pods-PartyUp-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PartyUp/Pods-PartyUp-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PartyUp/Pods-PartyUp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F8A3FE122295508700FD2475 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -347,6 +422,7 @@
 				F880DBFC22C789C40093A901 /* StretchyHeaderLayout.swift in Sources */,
 				F880DBF822C7819A0093A901 /* HeaderView.swift in Sources */,
 				F8A3FE1A2295508700FD2475 /* AppDelegate.swift in Sources */,
+				7AA2339422C9069A00D30931 /* MapsViewController.swift in Sources */,
 				F8DCE81922C3565200410CAB /* SelectFavoritesViewController.swift in Sources */,
 				F880DBF622C77E950093A901 /* EventCollectionViewController.swift in Sources */,
 				F880DBFE22C7D43B0093A901 /* DataManager.swift in Sources */,
@@ -510,6 +586,7 @@
 		};
 		F8A3FE372295508800FD2475 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 780E766350C9A1003E056B91 /* Pods-PartyUp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -528,6 +605,7 @@
 		};
 		F8A3FE382295508800FD2475 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 39148667BD758B0BE259928F /* Pods-PartyUp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

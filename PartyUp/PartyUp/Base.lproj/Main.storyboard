@@ -360,6 +360,21 @@
             </objects>
             <point key="canvasLocation" x="1954" y="21"/>
         </scene>
+        <!--Maps View Controller-->
+        <scene sceneID="A9R-5A-el1">
+            <objects>
+                <viewController id="u0O-gV-Rgh" customClass="MapsViewController" customModule="PartyUp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Xjr-GH-qLk">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="eWN-UG-sHC"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QeN-Cf-9xV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2970" y="301"/>
+        </scene>
         <!--Select Favorites View Controller-->
         <scene sceneID="u8V-S1-ZxX">
             <objects>
