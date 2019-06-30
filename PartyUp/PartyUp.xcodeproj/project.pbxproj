@@ -10,6 +10,7 @@
 		70C320B0FEA955593CA48DDD /* libPods-PartyUp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D8292A60442479084FE47192 /* libPods-PartyUp.a */; };
 		7A2A67CC22C2CCB50089BE3B /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2A67CB22C2CCB40089BE3B /* GradientView.swift */; };
 		7A988EBD22C937540065D6A3 /* heartEmpty.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A988EBC22C937540065D6A3 /* heartEmpty.png */; };
+		7A988EBF22C9514E0065D6A3 /* cocktail.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A988EBE22C9514E0065D6A3 /* cocktail.png */; };
 		7A98F3E422C66E53001B6CDE /* applelogo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7A98F3E322C66E53001B6CDE /* applelogo.jpg */; };
 		7AA2339322C9069A00D30931 /* mapStyle.json in Resources */ = {isa = PBXBuildFile; fileRef = 7AA2339122C9069900D30931 /* mapStyle.json */; };
 		7AA2339422C9069A00D30931 /* MapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA2339222C9069A00D30931 /* MapsViewController.swift */; };
@@ -48,7 +49,6 @@
 		F8A3FE3F22959BAA00FD2475 /* imp.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F8A3FE3E22959BAA00FD2475 /* imp.jpg */; };
 		F8B334FC22C3CA7300BB6790 /* launch.png in Resources */ = {isa = PBXBuildFile; fileRef = F8B334FB22C3CA7200BB6790 /* launch.png */; };
 		F8BE36C722C92F3B000A64F6 /* FullEventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BE36C622C92F3B000A64F6 /* FullEventCell.swift */; };
-		F8D407BC22C91482008163C9 /* cocktail.png in Resources */ = {isa = PBXBuildFile; fileRef = F8D407BB22C91482008163C9 /* cocktail.png */; };
 		F8D407BE22C9151D008163C9 /* map.png in Resources */ = {isa = PBXBuildFile; fileRef = F8D407BD22C9151D008163C9 /* map.png */; };
 		F8DCE81722C29B3500410CAB /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8DCE81622C29B3500410CAB /* EventViewController.swift */; };
 		F8DCE81922C3565200410CAB /* SelectFavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8DCE81822C3565200410CAB /* SelectFavoritesViewController.swift */; };
@@ -73,6 +73,7 @@
 		780E766350C9A1003E056B91 /* Pods-PartyUp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PartyUp.debug.xcconfig"; path = "Target Support Files/Pods-PartyUp/Pods-PartyUp.debug.xcconfig"; sourceTree = "<group>"; };
 		7A2A67CB22C2CCB40089BE3B /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		7A988EBC22C937540065D6A3 /* heartEmpty.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heartEmpty.png; sourceTree = "<group>"; };
+		7A988EBE22C9514E0065D6A3 /* cocktail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cocktail.png; sourceTree = "<group>"; };
 		7A98F3E322C66E53001B6CDE /* applelogo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = applelogo.jpg; sourceTree = "<group>"; };
 		7AA2339122C9069900D30931 /* mapStyle.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = mapStyle.json; sourceTree = "<group>"; };
 		7AA2339222C9069A00D30931 /* MapsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapsViewController.swift; sourceTree = "<group>"; };
@@ -116,7 +117,6 @@
 		F8A3FE3E22959BAA00FD2475 /* imp.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = imp.jpg; sourceTree = "<group>"; };
 		F8B334FB22C3CA7200BB6790 /* launch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launch.png; sourceTree = "<group>"; };
 		F8BE36C622C92F3B000A64F6 /* FullEventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullEventCell.swift; sourceTree = "<group>"; };
-		F8D407BB22C91482008163C9 /* cocktail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cocktail.png; path = ../../../Downloads/cocktail.png; sourceTree = "<group>"; };
 		F8D407BD22C9151D008163C9 /* map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map.png; sourceTree = "<group>"; };
 		F8DCE81622C29B3500410CAB /* EventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
 		F8DCE81822C3565200410CAB /* SelectFavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectFavoritesViewController.swift; sourceTree = "<group>"; };
@@ -234,8 +234,8 @@
 				F880DBFF22C7D9CE0093A901 /* heartEmpty.png */,
 				F880DBF522C77E950093A901 /* EventCollectionViewController.swift */,
 				F880DBFB22C789C40093A901 /* StretchyHeaderLayout.swift */,
+				7A988EBE22C9514E0065D6A3 /* cocktail.png */,
 				F8D407BD22C9151D008163C9 /* map.png */,
-				F8D407BB22C91482008163C9 /* cocktail.png */,
 				F880DBF722C7819A0093A901 /* HeaderView.swift */,
 				F84E71B222C4BB6B0059E1CA /* applelogo.jpg */,
 				F8DCE81822C3565200410CAB /* SelectFavoritesViewController.swift */,
@@ -370,9 +370,9 @@
 				F869D0AC22C6728E00E2F650 /* mausefalle.jpg in Resources */,
 				F869D0AA22C6728E00E2F650 /* evers.jpg in Resources */,
 				7A98F3E422C66E53001B6CDE /* applelogo.jpg in Resources */,
+				7A988EBF22C9514E0065D6A3 /* cocktail.png in Resources */,
 				F880DBF122C6AC950093A901 /* event6.jpg in Resources */,
 				F8A3FE1F2295508700FD2475 /* Main.storyboard in Resources */,
-				F8D407BC22C91482008163C9 /* cocktail.png in Resources */,
 				F880DC0022C7D9CE0093A901 /* heartEmpty.png in Resources */,
 				F869D0AE22C6728E00E2F650 /* remembar.jpg in Resources */,
 			);

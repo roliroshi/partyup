@@ -57,12 +57,7 @@ class MapEventPreviewView: UIView {
         return v
     }()
     
-    let imgView: UIImageView = {
-        let v=UIImageView()
-        v.image=#imageLiteral(resourceName: "restaurant1")
-        v.translatesAutoresizingMaskIntoConstraints=false
-        return v
-    }()
+    let imgView: UIImageView = UIImageView()
     
     let lblTitle: UILabel = {
         let lbl=UILabel()
