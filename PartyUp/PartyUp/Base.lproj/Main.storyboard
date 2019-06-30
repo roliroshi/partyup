@@ -150,7 +150,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="955.07246376811599" y="20.758928571428569"/>
+            <point key="canvasLocation" x="1865.217391304348" y="20.758928571428569"/>
         </scene>
         <!--Event View Controller-->
         <scene sceneID="EVH-5W-81n">
@@ -256,7 +256,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BP1-IJ-u1K" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2975" y="-607"/>
+            <point key="canvasLocation" x="3884.057971014493" y="-607.36607142857144"/>
         </scene>
         <!--Event Collection View Controller-->
         <scene sceneID="C51-fB-IG2">
@@ -358,22 +358,23 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nba-xj-cJG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1954" y="21"/>
+            <point key="canvasLocation" x="2863.768115942029" y="20.758928571428569"/>
         </scene>
-        <!--Maps View Controller-->
+        <!--Item-->
         <scene sceneID="A9R-5A-el1">
             <objects>
                 <viewController id="u0O-gV-Rgh" customClass="MapsViewController" customModule="PartyUp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Xjr-GH-qLk">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.16469594836235046" green="0.16078397631645203" blue="0.16078433394432068" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="eWN-UG-sHC"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="0tu-8n-I06"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QeN-Cf-9xV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2970" y="301"/>
+            <point key="canvasLocation" x="45" y="795"/>
         </scene>
         <!--Select Favorites View Controller-->
         <scene sceneID="u8V-S1-ZxX">
@@ -507,7 +508,7 @@
                                 </state>
                                 <connections>
                                     <action selector="exitButtonPressed:" destination="Dka-zS-mRA" eventType="touchUpInside" id="pHE-3c-BXM"/>
-                                    <segue destination="Ckb-Em-rvA" kind="show" id="8Yb-ov-YoU"/>
+                                    <segue destination="Jxi-Od-P2v" kind="show" id="8Yb-ov-YoU"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -557,10 +558,11 @@
             </objects>
             <point key="canvasLocation" x="-984.05797101449286" y="20.758928571428569"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Item-->
         <scene sceneID="BjX-wZ-7Z5">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ckb-Em-rvA" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="GPy-SI-qAU"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" hidden="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="LU9-2u-col">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -576,6 +578,24 @@
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5XC-wy-FE9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="955.07246376811599" y="20.758928571428569"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="eXr-bv-HTT">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Jxi-Od-P2v" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="kRc-Hf-Pwd">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Ckb-Em-rvA" kind="relationship" relationship="viewControllers" id="I49-ee-Upr"/>
+                        <segue destination="u0O-gV-Rgh" kind="relationship" relationship="viewControllers" id="aU7-Eb-gKr"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xJz-hb-sUi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="44.927536231884062" y="20.758928571428569"/>
         </scene>
