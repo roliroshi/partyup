@@ -450,7 +450,7 @@
                                                         <constraint firstAttribute="height" constant="50" id="MLp-bU-glq"/>
                                                         <constraint firstAttribute="width" constant="50" id="vJW-sJ-kOd"/>
                                                     </constraints>
-                                                    <state key="normal" title="Button" image="heartEmpty.png">
+                                                    <state key="normal" title="Button" image="heartEmpty.png" backgroundImage="heartEmpty.png">
                                                         <color key="titleColor" red="0.94117647059999998" green="0.070588235289999995" blue="0.74509803919999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <color key="titleShadowColor" red="0.94117647059999998" green="0.070588235289999995" blue="0.74509803919999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </state>
@@ -463,9 +463,11 @@
                                         <color key="backgroundColor" red="0.054902657870000003" green="0.05490069836" blue="0.054902039469999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstItem="xey-Xa-PIr" firstAttribute="leading" secondItem="95X-cL-hGF" secondAttribute="leading" id="7Nz-kf-vnh"/>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="dHu-sP-utZ" secondAttribute="trailing" symbolic="YES" id="8ks-Sz-3Nw"/>
                                             <constraint firstItem="fSo-nD-uOM" firstAttribute="centerX" secondItem="95X-cL-hGF" secondAttribute="centerX" id="AXi-WR-wdM"/>
                                             <constraint firstItem="dHu-sP-utZ" firstAttribute="leading" secondItem="xey-Xa-PIr" secondAttribute="leading" id="AsH-J6-sWn"/>
                                             <constraint firstItem="95X-cL-hGF" firstAttribute="top" secondItem="xey-Xa-PIr" secondAttribute="bottom" constant="14" id="B0v-uc-rrr"/>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="xey-Xa-PIr" secondAttribute="trailing" symbolic="YES" id="E3G-Fb-YA5"/>
                                             <constraint firstItem="95X-cL-hGF" firstAttribute="top" secondItem="XVx-lT-hRS" secondAttribute="bottom" constant="100" id="I65-tW-gZI"/>
                                             <constraint firstItem="qmF-gm-eaa" firstAttribute="top" secondItem="xey-Xa-PIr" secondAttribute="bottom" constant="43" id="KCz-g1-u39"/>
                                             <constraint firstAttribute="bottomMargin" secondItem="qmF-gm-eaa" secondAttribute="bottom" constant="59" id="Kfm-O4-Rb9"/>
@@ -482,6 +484,7 @@
                                             <constraint firstItem="55f-rj-Gdq" firstAttribute="top" secondItem="fSo-nD-uOM" secondAttribute="bottom" constant="17" id="sxl-dB-FTW"/>
                                             <constraint firstAttribute="bottomMargin" secondItem="95X-cL-hGF" secondAttribute="bottom" constant="88" id="upD-UE-KcJ"/>
                                             <constraint firstItem="55f-rj-Gdq" firstAttribute="leading" secondItem="F6x-hU-ZiO" secondAttribute="leadingMargin" constant="12" id="weN-kL-AXo"/>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="55f-rj-Gdq" secondAttribute="trailing" symbolic="YES" id="ybS-v9-gaT"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -587,6 +590,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Jxi-Od-P2v" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="kRc-Hf-Pwd">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>

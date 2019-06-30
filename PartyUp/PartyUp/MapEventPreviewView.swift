@@ -19,10 +19,10 @@ class MapEventPreviewView: UIView {
         setupViews()
     }
     
-    func setData(title: String, img: UIImage, price: Int) {
-        lblTitle.text = title
-        imgView.image = img
-        lblPrice.text = "$\(price)"
+    func setData(event: Event) {
+        lblTitle.text = event.club
+        imgView.image = UIImage(named: event.name)
+        lblDate.text = event.date
     }
     
     func setupViews() {
@@ -44,11 +44,11 @@ class MapEventPreviewView: UIView {
         imgView.rightAnchor.constraint(equalTo: rightAnchor).isActive=true
         imgView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive=true
         
-        addSubview(lblPrice)
-        lblPrice.centerXAnchor.constraint(equalTo: centerXAnchor).isActive=true
-        lblPrice.centerYAnchor.constraint(equalTo: imgView.centerYAnchor).isActive=true
-        lblPrice.widthAnchor.constraint(equalToConstant: 90).isActive=true
-        lblPrice.heightAnchor.constraint(equalToConstant: 40).isActive=true
+        addSubview(lblDate)
+        lblDate.centerXAnchor.constraint(equalTo: centerXAnchor).isActive=true
+        lblDate.centerYAnchor.constraint(equalTo: imgView.centerYAnchor).isActive=true
+        lblDate.widthAnchor.constraint(equalToConstant: 90).isActive=true
+        lblDate.heightAnchor.constraint(equalToConstant: 40).isActive=true
     }
     
     let containerView: UIView = {
@@ -75,7 +75,7 @@ class MapEventPreviewView: UIView {
         return lbl
     }()
     
-    let lblPrice: UILabel = {
+    let lblDate: UILabel = {
         let lbl=UILabel()
         lbl.text="$12"
         lbl.font=UIFont.boldSystemFont(ofSize: 32)

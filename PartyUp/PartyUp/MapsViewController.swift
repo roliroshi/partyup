@@ -12,7 +12,9 @@ import CoreLocation
 import GooglePlaces
 
 class MapsViewController: UIViewController, CLLocationManagerDelegate, GMSMapViewDelegate {
-
+    
+    var mapEventPreviewView = MapEventPreviewView()
+    
     let locationManager = CLLocationManager()
     let currentLocationMarker = GMSMarker()
     var mapView: GMSMapView!
@@ -22,6 +24,9 @@ class MapsViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
     var likelyPlaces: [GMSPlace] = []
     // The currently selected place.
     var selectedPlace: GMSPlace?
+
+    let customMarkerWidth: Int = 50
+    let customMarkerHeight: Int = 70
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,6 +59,7 @@ class MapsViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
         mapView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         mapView.isMyLocationEnabled = true
         
+        mapEventPreviewView = MapEventPreviewView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: 190))
         // Add the map to the view, hide it until we've got a location update.
         view.addSubview(mapView)
     }
@@ -77,6 +83,27 @@ class MapsViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
             locationManager.stopUpdatingLocation()
         }
     }
+    
+//    func showPartyMarkers(lat: Double, long: Double) {
+//        mapView.clear()
+//        for i in 0..<3 {
+//            let randNum=Double(arc4random_uniform(30))/10000
+//            let marker=GMSMarker()
+//            let customMarker = CustomMarkerView(frame: CGRect(x: 0, y: 0, width: customMarkerWidth, height: customMarkerHeight), image: (previewDemoData[i]).img, borderColor: UIColor.darkGray, tag: i)
+//            marker.iconView=customMarker
+//            let randInt = arc4random_uniform(4)
+//            if randInt == 0 {
+//                marker.position = CLLocationCoordinate2D(latitude: lat+randNum, longitude: long-randNum)
+//            } else if randInt == 1 {
+//                marker.position = CLLocationCoordinate2D(latitude: lat-randNum, longitude: long+randNum)
+//            } else if randInt == 2 {
+//                marker.position = CLLocationCoordinate2D(latitude: lat-randNum, longitude: long-randNum)
+//            } else {
+//                marker.position = CLLocationCoordinate2D(latitude: lat+randNum, longitude: long+randNum)
+//            }
+//            marker.map = self.myMapView
+//        }
+//    }
     
     // Populate the array with the list of likely places.
     func listLikelyPlaces() {
