@@ -10,11 +10,15 @@ import UIKit
 
 class ViewController: UIViewController{
     
+    @IBOutlet weak var favoritesButton: UIButton!
+    @IBOutlet weak var popularButton: UIButton!
+    @IBOutlet weak var myEventsButton: UIButton!
+    
+    var pinkButton: UIButton?
+    
     var events: [Event] = DataManager.events
     var clubs: [Club] = []
     
-    let eventPics = ["event1.jpg","event2.jpg","event3.jpg","event4.jpg","event5.jpg","event6.jpg"]
-    let clubPics = ["a1.jpg","feeling.png","imperio.jpg","empire.jpg","evers.jpg","remembar.jpg"]
     
     
     
@@ -23,12 +27,40 @@ class ViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        pinkButton = popularButton
+        
         //loadEvents()
         // Do any additional setup after loading the view.
         
         eventCollectionView.dataSource = self
         
     }
+    
+    @IBAction func menuButtonPressed(_ sender: UIButton) {
+        
+        if sender != pinkButton{
+            
+            switch sender.tag {
+                case 0:
+                    events = DataManager.favoriteEvents
+                    eventCollectionView.reloadData()
+                case 1:
+                    events = DataManager.events
+                    eventCollectionView.reloadData()
+                case 2:
+                    events = DataManager.myEvents
+                    eventCollectionView.reloadData()
+                default:
+                    print("error")
+            }
+            
+            sender.setTitleColor(UIColor.magenta, for: .normal)
+            pinkButton?.setTitleColor(UIColor.gray, for: .normal)
+            pinkButton = sender
+        }
+        
+    }
+    
     
     /*
     func loadEvents() {
@@ -56,8 +88,8 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate{
         cell.eventName.text = events[indexPath.row].name
         cell.clubName.text = events[indexPath.row].club
         cell.date.text = events[indexPath.row].date
-        cell.clubLogo.image = UIImage(named: clubPics[indexPath.row])
-        cell.eventImage.image = UIImage(named: eventPics[indexPath.row])
+        cell.clubLogo.image = events[indexPath.row].clubLogo
+        cell.eventImage.image = events[indexPath.row].eventImage
         
         
         cell.clubLogo.layer.borderWidth = 2
@@ -79,6 +111,19 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate{
         
         performSegue(withIdentifier: "toEventDetails", sender: cell)
     }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toEventDetails"{
+            let destinationVC = segue.destination as! EventCollectionViewController
+            print("hii")
+            if let cell = sender as? EventCell {
+                destinationVC.event = Event(name: cell.eventName.text!, date: cell.date.text!, club: cell.clubName.text!, eventImage: cell.eventImage.image!, clubLogo: cell.clubLogo.image!)
+            }
+            
+            
+        }
+    } 
     
 }
 

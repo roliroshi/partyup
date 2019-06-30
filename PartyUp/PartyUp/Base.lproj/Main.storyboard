@@ -32,14 +32,20 @@
                                 <state key="normal" title="Favorites">
                                     <color key="titleColor" red="0.43921568630000002" green="0.43921568630000002" blue="0.43921568630000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="menuButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YFr-Or-S1t"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vGJ-Ad-nl1">
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vGJ-Ad-nl1">
                                 <rect key="frame" x="184" y="117" width="91" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="My Events">
                                     <color key="titleColor" red="0.43921568630000002" green="0.43921568630000002" blue="0.43921568630000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="menuButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lIU-vX-oMW"/>
+                                </connections>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="UKN-Fb-pLI">
                                 <rect key="frame" x="20" y="173" width="374" height="723"/>
@@ -126,18 +132,21 @@
                                             <outlet property="date" destination="hBS-cQ-2pP" id="RcN-3b-kux"/>
                                             <outlet property="eventImage" destination="Jma-yp-Qal" id="pun-1R-AiA"/>
                                             <outlet property="eventName" destination="MpT-vh-l0n" id="sBc-N1-uFh"/>
-                                            <segue destination="2QU-gv-bfg" kind="show" identifier="toEventDetails" id="pWJ-iG-INR"/>
+                                            <segue destination="2QU-gv-bfg" kind="show" identifier="toEventDetails" id="XMt-OZ-15F"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OEi-dg-OQV">
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OEi-dg-OQV">
                                 <rect key="frame" x="109" y="117" width="67" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Popular">
                                     <color key="titleColor" red="0.94117647059999998" green="0.070588235289999995" blue="0.74509803919999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="menuButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="w3K-w4-bXf"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -146,6 +155,9 @@
                     <navigationItem key="navigationItem" id="1xw-hG-R1v"/>
                     <connections>
                         <outlet property="eventCollectionView" destination="UKN-Fb-pLI" id="9Ky-bw-KX9"/>
+                        <outlet property="favoritesButton" destination="w70-Y3-GHF" id="MaQ-js-cLP"/>
+                        <outlet property="myEventsButton" destination="vGJ-Ad-nl1" id="b1f-Fs-ErY"/>
+                        <outlet property="popularButton" destination="OEi-dg-OQV" id="mgC-Dp-Bj5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -251,12 +263,15 @@
                         <viewLayoutGuide key="safeArea" id="JY7-z2-Wqq"/>
                     </view>
                     <connections>
+                        <outlet property="clubName" destination="z1v-S4-fRr" id="zyi-JH-n9N"/>
+                        <outlet property="clubRating" destination="vHa-Yl-gIt" id="bKF-KU-fc7"/>
+                        <outlet property="evenTitel" destination="ke0-yF-Kd1" id="ETm-Gy-4I6"/>
                         <outlet property="eventImage" destination="pC1-sT-3WV" id="Jpo-e5-VTU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BP1-IJ-u1K" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3884.057971014493" y="-607.36607142857144"/>
+            <point key="canvasLocation" x="3558" y="-697"/>
         </scene>
         <!--Event Collection View Controller-->
         <scene sceneID="C51-fB-IG2">
@@ -268,7 +283,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <collectionViewLayout key="collectionViewLayout" id="fje-1w-5Og" customClass="StretchyHeaderLayout" customModule="PartyUp" customModuleProvider="target"/>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="fullEventCell" id="ejE-fF-DFG">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="fullEventCell" id="ejE-fF-DFG" customClass="FullEventCell" customModule="PartyUp" customModuleProvider="target">
                                 <rect key="frame" x="-0.5" y="0.0" width="415" height="815"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -348,6 +363,10 @@
                                     <constraint firstItem="lyw-um-a3e" firstAttribute="leading" secondItem="uxy-SC-BBf" secondAttribute="leading" id="xe1-6e-2l6"/>
                                 </constraints>
                                 <size key="customSize" width="415" height="815"/>
+                                <connections>
+                                    <outlet property="clubName" destination="ipd-fj-AFf" id="G9s-Oc-ryD"/>
+                                    <outlet property="eventTitel" destination="igu-jd-w8Q" id="RJj-r4-ZNj"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
@@ -358,9 +377,9 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nba-xj-cJG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2863.768115942029" y="20.758928571428569"/>
+            <point key="canvasLocation" x="2804" y="21"/>
         </scene>
-        <!--Item-->
+        <!--Map-->
         <scene sceneID="A9R-5A-el1">
             <objects>
                 <viewController id="u0O-gV-Rgh" customClass="MapsViewController" customModule="PartyUp" customModuleProvider="target" sceneMemberID="viewController">
@@ -370,7 +389,9 @@
                         <color key="backgroundColor" red="0.16469594836235046" green="0.16078397631645203" blue="0.16078433394432068" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="eWN-UG-sHC"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="0tu-8n-I06"/>
+                    <tabBarItem key="tabBarItem" title="Map" image="map.png" id="0tu-8n-I06">
+                        <inset key="imageInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="1"/>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QeN-Cf-9xV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -450,7 +471,7 @@
                                                         <constraint firstAttribute="height" constant="50" id="MLp-bU-glq"/>
                                                         <constraint firstAttribute="width" constant="50" id="vJW-sJ-kOd"/>
                                                     </constraints>
-                                                    <state key="normal" title="Button" image="heartEmpty.png" backgroundImage="heartEmpty.png">
+                                                    <state key="normal" title="Button" image="heartEmpty.png">
                                                         <color key="titleColor" red="0.94117647059999998" green="0.070588235289999995" blue="0.74509803919999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <color key="titleShadowColor" red="0.94117647059999998" green="0.070588235289999995" blue="0.74509803919999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </state>
@@ -463,11 +484,9 @@
                                         <color key="backgroundColor" red="0.054902657870000003" green="0.05490069836" blue="0.054902039469999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstItem="xey-Xa-PIr" firstAttribute="leading" secondItem="95X-cL-hGF" secondAttribute="leading" id="7Nz-kf-vnh"/>
-                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="dHu-sP-utZ" secondAttribute="trailing" symbolic="YES" id="8ks-Sz-3Nw"/>
                                             <constraint firstItem="fSo-nD-uOM" firstAttribute="centerX" secondItem="95X-cL-hGF" secondAttribute="centerX" id="AXi-WR-wdM"/>
                                             <constraint firstItem="dHu-sP-utZ" firstAttribute="leading" secondItem="xey-Xa-PIr" secondAttribute="leading" id="AsH-J6-sWn"/>
                                             <constraint firstItem="95X-cL-hGF" firstAttribute="top" secondItem="xey-Xa-PIr" secondAttribute="bottom" constant="14" id="B0v-uc-rrr"/>
-                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="xey-Xa-PIr" secondAttribute="trailing" symbolic="YES" id="E3G-Fb-YA5"/>
                                             <constraint firstItem="95X-cL-hGF" firstAttribute="top" secondItem="XVx-lT-hRS" secondAttribute="bottom" constant="100" id="I65-tW-gZI"/>
                                             <constraint firstItem="qmF-gm-eaa" firstAttribute="top" secondItem="xey-Xa-PIr" secondAttribute="bottom" constant="43" id="KCz-g1-u39"/>
                                             <constraint firstAttribute="bottomMargin" secondItem="qmF-gm-eaa" secondAttribute="bottom" constant="59" id="Kfm-O4-Rb9"/>
@@ -484,7 +503,6 @@
                                             <constraint firstItem="55f-rj-Gdq" firstAttribute="top" secondItem="fSo-nD-uOM" secondAttribute="bottom" constant="17" id="sxl-dB-FTW"/>
                                             <constraint firstAttribute="bottomMargin" secondItem="95X-cL-hGF" secondAttribute="bottom" constant="88" id="upD-UE-KcJ"/>
                                             <constraint firstItem="55f-rj-Gdq" firstAttribute="leading" secondItem="F6x-hU-ZiO" secondAttribute="leadingMargin" constant="12" id="weN-kL-AXo"/>
-                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="55f-rj-Gdq" secondAttribute="trailing" symbolic="YES" id="ybS-v9-gaT"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -561,11 +579,13 @@
             </objects>
             <point key="canvasLocation" x="-984.05797101449286" y="20.758928571428569"/>
         </scene>
-        <!--Item-->
+        <!--Events-->
         <scene sceneID="BjX-wZ-7Z5">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ckb-Em-rvA" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="GPy-SI-qAU"/>
+                    <tabBarItem key="tabBarItem" title="Events" image="cocktail.png" id="GPy-SI-qAU">
+                        <inset key="imageInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="1"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" hidden="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="LU9-2u-col">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -589,10 +609,12 @@
             <objects>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Jxi-Od-P2v" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="kRc-Hf-Pwd">
+                    <tabBar key="tabBar" contentMode="scaleAspectFill" insetsLayoutMarginsFromSafeArea="NO" id="kRc-Hf-Pwd">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="selectedImageTintColor" red="0.94117647059999998" green="0.070588235289999995" blue="0.74509803919999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="Ckb-Em-rvA" kind="relationship" relationship="viewControllers" id="I49-ee-Upr"/>
@@ -608,7 +630,9 @@
         <image name="BeFunky-photo.jpg" width="981.1199951171875" height="654"/>
         <image name="a1.jpg" width="180" height="180"/>
         <image name="applelogo.jpg" width="435" height="292.5"/>
+        <image name="cocktail.png" width="24" height="24"/>
         <image name="event3.jpg" width="960" height="508"/>
         <image name="heartEmpty.png" width="409.60000610351562" height="409.60000610351562"/>
+        <image name="map.png" width="24" height="24"/>
     </resources>
 </document>

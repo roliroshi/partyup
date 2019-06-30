@@ -47,6 +47,9 @@
 		F8A3FE3D22958F1600FD2475 /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A3FE3C22958F1600FD2475 /* EventCell.swift */; };
 		F8A3FE3F22959BAA00FD2475 /* imp.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F8A3FE3E22959BAA00FD2475 /* imp.jpg */; };
 		F8B334FC22C3CA7300BB6790 /* launch.png in Resources */ = {isa = PBXBuildFile; fileRef = F8B334FB22C3CA7200BB6790 /* launch.png */; };
+		F8BE36C722C92F3B000A64F6 /* FullEventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BE36C622C92F3B000A64F6 /* FullEventCell.swift */; };
+		F8D407BC22C91482008163C9 /* cocktail.png in Resources */ = {isa = PBXBuildFile; fileRef = F8D407BB22C91482008163C9 /* cocktail.png */; };
+		F8D407BE22C9151D008163C9 /* map.png in Resources */ = {isa = PBXBuildFile; fileRef = F8D407BD22C9151D008163C9 /* map.png */; };
 		F8DCE81722C29B3500410CAB /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8DCE81622C29B3500410CAB /* EventViewController.swift */; };
 		F8DCE81922C3565200410CAB /* SelectFavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8DCE81822C3565200410CAB /* SelectFavoritesViewController.swift */; };
 		F8DCE81B22C3578600410CAB /* ClubCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8DCE81A22C3578600410CAB /* ClubCell.swift */; };
@@ -112,6 +115,9 @@
 		F8A3FE3C22958F1600FD2475 /* EventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCell.swift; sourceTree = "<group>"; };
 		F8A3FE3E22959BAA00FD2475 /* imp.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = imp.jpg; sourceTree = "<group>"; };
 		F8B334FB22C3CA7200BB6790 /* launch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launch.png; sourceTree = "<group>"; };
+		F8BE36C622C92F3B000A64F6 /* FullEventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullEventCell.swift; sourceTree = "<group>"; };
+		F8D407BB22C91482008163C9 /* cocktail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cocktail.png; path = ../../../Downloads/cocktail.png; sourceTree = "<group>"; };
+		F8D407BD22C9151D008163C9 /* map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map.png; sourceTree = "<group>"; };
 		F8DCE81622C29B3500410CAB /* EventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
 		F8DCE81822C3565200410CAB /* SelectFavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectFavoritesViewController.swift; sourceTree = "<group>"; };
 		F8DCE81A22C3578600410CAB /* ClubCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubCell.swift; sourceTree = "<group>"; };
@@ -214,8 +220,8 @@
 				F8A3FE3E22959BAA00FD2475 /* imp.jpg */,
 				7A98F3E322C66E53001B6CDE /* applelogo.jpg */,
 				F8DCE81C22C3A13000410CAB /* bg.jpg */,
-				7A2A67CB22C2CCB40089BE3B /* GradientView.swift */,
 				F8A3FE192295508700FD2475 /* AppDelegate.swift */,
+				7A2A67CB22C2CCB40089BE3B /* GradientView.swift */,
 				7AA2339122C9069900D30931 /* mapStyle.json */,
 				7AA2339922C92A0C00D30931 /* MapEventPreviewView.swift */,
 				7AA2339722C9298E00D30931 /* CustomMarkerView.swift */,
@@ -228,6 +234,8 @@
 				F880DBFF22C7D9CE0093A901 /* heartEmpty.png */,
 				F880DBF522C77E950093A901 /* EventCollectionViewController.swift */,
 				F880DBFB22C789C40093A901 /* StretchyHeaderLayout.swift */,
+				F8D407BD22C9151D008163C9 /* map.png */,
+				F8D407BB22C91482008163C9 /* cocktail.png */,
 				F880DBF722C7819A0093A901 /* HeaderView.swift */,
 				F84E71B222C4BB6B0059E1CA /* applelogo.jpg */,
 				F8DCE81822C3565200410CAB /* SelectFavoritesViewController.swift */,
@@ -235,6 +243,7 @@
 				F8A3FE3C22958F1600FD2475 /* EventCell.swift */,
 				F8A3FE232295508800FD2475 /* Assets.xcassets */,
 				F8A3FE252295508800FD2475 /* LaunchScreen.storyboard */,
+				F8BE36C622C92F3B000A64F6 /* FullEventCell.swift */,
 				F8A3FE282295508800FD2475 /* Info.plist */,
 				F8A3FE202295508700FD2475 /* PartyUp.xcdatamodeld */,
 				F8DCE81A22C3578600410CAB /* ClubCell.swift */,
@@ -353,6 +362,7 @@
 				F8A3FE242295508800FD2475 /* Assets.xcassets in Resources */,
 				F880DBF222C6AC950093A901 /* event2.jpg in Resources */,
 				7A988EBD22C937540065D6A3 /* heartEmpty.png in Resources */,
+				F8D407BE22C9151D008163C9 /* map.png in Resources */,
 				F869D0A922C6728E00E2F650 /* empire.jpg in Resources */,
 				F869D0A622C6728E00E2F650 /* a1.jpg in Resources */,
 				F8DCE81F22C3A70700410CAB /* heart.png in Resources */,
@@ -362,6 +372,7 @@
 				7A98F3E422C66E53001B6CDE /* applelogo.jpg in Resources */,
 				F880DBF122C6AC950093A901 /* event6.jpg in Resources */,
 				F8A3FE1F2295508700FD2475 /* Main.storyboard in Resources */,
+				F8D407BC22C91482008163C9 /* cocktail.png in Resources */,
 				F880DC0022C7D9CE0093A901 /* heartEmpty.png in Resources */,
 				F869D0AE22C6728E00E2F650 /* remembar.jpg in Resources */,
 			);
@@ -426,6 +437,7 @@
 				F880DBFA22C788390093A901 /* Extensions+UIView.swift in Sources */,
 				F8DCE81722C29B3500410CAB /* EventViewController.swift in Sources */,
 				F8A3FE3D22958F1600FD2475 /* EventCell.swift in Sources */,
+				F8BE36C722C92F3B000A64F6 /* FullEventCell.swift in Sources */,
 				7A2A67CC22C2CCB50089BE3B /* GradientView.swift in Sources */,
 				F8A3FE1C2295508700FD2475 /* ViewController.swift in Sources */,
 				7AA2339822C9298E00D30931 /* CustomMarkerView.swift in Sources */,

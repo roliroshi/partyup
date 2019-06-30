@@ -11,6 +11,11 @@ import UIKit
 class EventViewController: UIViewController{
 
     @IBOutlet weak var eventImage: UIImageView!
+    @IBOutlet weak var evenTitel: UILabel!
+    @IBOutlet weak var clubName: UILabel!
+    @IBOutlet weak var clubRating: UILabel!
+    
+    var event: Event?
     
     
     let zoomImageView = UIImageView()
@@ -18,12 +23,24 @@ class EventViewController: UIViewController{
     let navBarCoverView = UIView()
     let tabBarCoverView = UIView()
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setupEvent()
+        
+        
     
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
         eventImage.isUserInteractionEnabled = true
         eventImage.addGestureRecognizer(tapGestureRecognizer)
+    }
+    
+    fileprivate func setupEvent() {
+        eventImage.image = event?.eventImage
+        evenTitel.text = event?.name
+        clubName.text = event?.club
     }
     
     @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer)

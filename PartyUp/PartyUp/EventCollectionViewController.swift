@@ -16,6 +16,9 @@ class EventCollectionViewController: UICollectionViewController, UICollectionVie
     
     var headerView: HeaderView?
     var eventImage: UIImageView!
+    
+    var event: Event?
+  
 
     
     
@@ -27,13 +30,13 @@ class EventCollectionViewController: UICollectionViewController, UICollectionVie
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
+       //headerView?.imageView.image = event?.eventImage
         setupLayout()
         setupCollectionView()
-        
-      
-        
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        headerView?.animator.stopAnimation(true)
     }
     
     override func scrollViewDidScroll(_ scrollView: UIScrollView) {
@@ -45,7 +48,10 @@ class EventCollectionViewController: UICollectionViewController, UICollectionVie
         }
         
         headerView?.animator.fractionComplete = abs(contentOffsetY) / 1000
+        
     }
+    
+
 
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -156,6 +162,7 @@ class EventCollectionViewController: UICollectionViewController, UICollectionVie
         headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: headerId, for: indexPath) as? HeaderView
         
         eventImage = headerView?.imageView
+        eventImage.image = event?.eventImage
         
           let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
         eventImage.isUserInteractionEnabled = true
@@ -173,8 +180,10 @@ class EventCollectionViewController: UICollectionViewController, UICollectionVie
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "fullEventCell", for: indexPath)
-        //cell.backgroundColor = .black
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "fullEventCell", for: indexPath) as! FullEventCell
+        cell.eventTitel.text = event?.name
+        cell.clubName.text = event?.club
+        //eventImage.image = event?.eventImage
         return cell
     }
     

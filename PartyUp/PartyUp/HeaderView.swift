@@ -10,8 +10,8 @@ import UIKit
 
 class HeaderView: UICollectionReusableView {
     
-    let imageView: UIImageView = {
-        let iv = UIImageView(image: #imageLiteral(resourceName: "event4.jpg"))
+    var imageView: UIImageView = {
+        var iv = UIImageView(image: #imageLiteral(resourceName: "event4.jpg"))
         iv.contentMode = .scaleAspectFill
         return iv
     }()
