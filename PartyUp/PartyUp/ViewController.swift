@@ -86,9 +86,9 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate{
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "eventCell", for: indexPath) as! EventCell
         
         cell.eventName.text = events[indexPath.row].name
-        cell.clubName.text = events[indexPath.row].club
+        cell.clubName.text = events[indexPath.row].club.name
         cell.date.text = events[indexPath.row].date
-        cell.clubLogo.image = events[indexPath.row].clubLogo
+        cell.clubLogo.image = events[indexPath.row].club.logo
         cell.eventImage.image = events[indexPath.row].eventImage
         
         
@@ -118,9 +118,8 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate{
             let destinationVC = segue.destination as! EventCollectionViewController
             print("hii")
             if let cell = sender as? EventCell {
-                destinationVC.event = Event(name: cell.eventName.text!, date: cell.date.text!, club: cell.clubName.text!, eventImage: cell.eventImage.image!, clubLogo: cell.clubLogo.image!)
+                destinationVC.event = DataManager.events.filter{$0.name == cell.eventName.text}.first
             }
-            
             
         }
     } 

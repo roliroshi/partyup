@@ -62,6 +62,7 @@ class MapsViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
         mapEventPreviewView = MapEventPreviewView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: 190))
         // Add the map to the view, hide it until we've got a location update.
         view.addSubview(mapView)
+        showPartyMarkers()
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
@@ -84,26 +85,16 @@ class MapsViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
         }
     }
     
-//    func showPartyMarkers(lat: Double, long: Double) {
-//        mapView.clear()
-//        for i in 0..<3 {
-//            let randNum=Double(arc4random_uniform(30))/10000
-//            let marker=GMSMarker()
-//            let customMarker = CustomMarkerView(frame: CGRect(x: 0, y: 0, width: customMarkerWidth, height: customMarkerHeight), image: (previewDemoData[i]).img, borderColor: UIColor.darkGray, tag: i)
-//            marker.iconView=customMarker
-//            let randInt = arc4random_uniform(4)
-//            if randInt == 0 {
-//                marker.position = CLLocationCoordinate2D(latitude: lat+randNum, longitude: long-randNum)
-//            } else if randInt == 1 {
-//                marker.position = CLLocationCoordinate2D(latitude: lat-randNum, longitude: long+randNum)
-//            } else if randInt == 2 {
-//                marker.position = CLLocationCoordinate2D(latitude: lat-randNum, longitude: long-randNum)
-//            } else {
-//                marker.position = CLLocationCoordinate2D(latitude: lat+randNum, longitude: long+randNum)
-//            }
-//            marker.map = self.myMapView
-//        }
-//    }
+    func showPartyMarkers() {
+        mapView.clear()
+        for event in DataManager.events {
+            let marker = GMSMarker()
+            let customMarker = CustomMarkerView(frame: CGRect(x: 0, y: 0, width: customMarkerWidth, height: customMarkerHeight), image: event.club.logo, borderColor: UIColor.darkGray, tag: event.id)
+            marker.iconView = customMarker
+            marker.position = CLLocationCoordinate2D(latitude: event.club.latitude, longitude: event.club.longitude)
+            marker.map = self.mapView
+        }
+    }
     
     // Populate the array with the list of likely places.
     func listLikelyPlaces() {

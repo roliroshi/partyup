@@ -20,8 +20,8 @@ class MapEventPreviewView: UIView {
     }
     
     func setData(event: Event) {
-        lblTitle.text = event.club
-        imgView.image = UIImage(named: event.name)
+        lblTitle.text = event.club.name
+        imgView.image = event.eventImage
         lblDate.text = event.date
     }
     

@@ -182,7 +182,7 @@ class EventCollectionViewController: UICollectionViewController, UICollectionVie
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "fullEventCell", for: indexPath) as! FullEventCell
         cell.eventTitel.text = event?.name
-        cell.clubName.text = event?.club
+        cell.clubName.text = event?.club.name
         //eventImage.image = event?.eventImage
         return cell
     }

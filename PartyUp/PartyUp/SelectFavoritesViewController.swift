@@ -47,7 +47,7 @@ class SelectFavoritesViewController: UIViewController {
     @IBAction func exitButtonPressed(_ sender: Any) {
         for cell in clubsCollectionView.visibleCells as! [ClubCell] {
             if cell.fullHeart {
-                favoriteClubs.append(Club(name: cell.clubName.text!, type: cell.clubType.text!, rating: cell.ratingLabel.text!, street: cell.clubStreet.text!, city: cell.clubCity.text!, logo: UIImage(named: "applelogo.jpg")!))
+                favoriteClubs.append(DataManager.clubs.filter{$0.name == cell.clubName.text}.first!)
             }
         }
         print(favoriteClubs.count)

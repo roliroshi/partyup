@@ -40,7 +40,7 @@ class EventViewController: UIViewController{
     fileprivate func setupEvent() {
         eventImage.image = event?.eventImage
         evenTitel.text = event?.name
-        clubName.text = event?.club
+        clubName.text = event?.club.name
     }
     
     @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer)
