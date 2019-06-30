@@ -32,14 +32,20 @@
                                 <state key="normal" title="Favorites">
                                     <color key="titleColor" red="0.43921568630000002" green="0.43921568630000002" blue="0.43921568630000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="menuButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YFr-Or-S1t"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vGJ-Ad-nl1">
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vGJ-Ad-nl1">
                                 <rect key="frame" x="184" y="117" width="91" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="My Events">
                                     <color key="titleColor" red="0.43921568630000002" green="0.43921568630000002" blue="0.43921568630000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="menuButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lIU-vX-oMW"/>
+                                </connections>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="UKN-Fb-pLI">
                                 <rect key="frame" x="20" y="173" width="374" height="723"/>
@@ -131,13 +137,16 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OEi-dg-OQV">
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OEi-dg-OQV">
                                 <rect key="frame" x="109" y="117" width="67" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Popular">
                                     <color key="titleColor" red="0.94117647059999998" green="0.070588235289999995" blue="0.74509803919999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="menuButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="w3K-w4-bXf"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -146,6 +155,9 @@
                     <navigationItem key="navigationItem" id="1xw-hG-R1v"/>
                     <connections>
                         <outlet property="eventCollectionView" destination="UKN-Fb-pLI" id="9Ky-bw-KX9"/>
+                        <outlet property="favoritesButton" destination="w70-Y3-GHF" id="MaQ-js-cLP"/>
+                        <outlet property="myEventsButton" destination="vGJ-Ad-nl1" id="b1f-Fs-ErY"/>
+                        <outlet property="popularButton" destination="OEi-dg-OQV" id="mgC-Dp-Bj5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -360,7 +372,7 @@
             </objects>
             <point key="canvasLocation" x="2863.768115942029" y="20.758928571428569"/>
         </scene>
-        <!--Item-->
+        <!--Map-->
         <scene sceneID="A9R-5A-el1">
             <objects>
                 <viewController id="u0O-gV-Rgh" customClass="MapsViewController" customModule="PartyUp" customModuleProvider="target" sceneMemberID="viewController">
@@ -370,7 +382,9 @@
                         <color key="backgroundColor" red="0.16469594836235046" green="0.16078397631645203" blue="0.16078433394432068" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="eWN-UG-sHC"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="0tu-8n-I06"/>
+                    <tabBarItem key="tabBarItem" title="Map" image="map.png" id="0tu-8n-I06">
+                        <inset key="imageInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="1"/>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QeN-Cf-9xV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -558,11 +572,13 @@
             </objects>
             <point key="canvasLocation" x="-984.05797101449286" y="20.758928571428569"/>
         </scene>
-        <!--Item-->
+        <!--Events-->
         <scene sceneID="BjX-wZ-7Z5">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ckb-Em-rvA" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="GPy-SI-qAU"/>
+                    <tabBarItem key="tabBarItem" title="Events" image="cocktail.png" id="GPy-SI-qAU">
+                        <inset key="imageInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="1"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" hidden="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="LU9-2u-col">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -586,9 +602,12 @@
             <objects>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Jxi-Od-P2v" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="kRc-Hf-Pwd">
+                    <tabBar key="tabBar" contentMode="scaleAspectFill" insetsLayoutMarginsFromSafeArea="NO" id="kRc-Hf-Pwd">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="selectedImageTintColor" red="0.94117647059999998" green="0.070588235289999995" blue="0.74509803919999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="Ckb-Em-rvA" kind="relationship" relationship="viewControllers" id="I49-ee-Upr"/>
@@ -604,7 +623,9 @@
         <image name="BeFunky-photo.jpg" width="981.1199951171875" height="654"/>
         <image name="a1.jpg" width="180" height="180"/>
         <image name="applelogo.jpg" width="435" height="292.5"/>
+        <image name="cocktail.png" width="24" height="24"/>
         <image name="event3.jpg" width="960" height="508"/>
         <image name="heartEmpty.png" width="409.60000610351562" height="409.60000610351562"/>
+        <image name="map.png" width="24" height="24"/>
     </resources>
 </document>

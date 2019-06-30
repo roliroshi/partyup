@@ -24,6 +24,8 @@ struct Event {
     let name: String
     let date: String
     let club: String
+    let eventImage: UIImage
+    let clubLogo: UIImage
     
 }
 
@@ -42,14 +44,26 @@ class DataManager{
         Club(name: "Mausefalle", type: "Bar", rating: "★ 4.0", street: "Wegscheider Str. 3", city: "4020 Linz", logo: UIImage(named: "mausefalle.jpg") ?? UIImage(named: "empire.jpg")!)
         ]
     
+   
+    
     static let events: [Event] = [
-        Event(name: "Schere, STEIN, Papier!", date: "28.06.19", club: clubs[0].name),
-        Event(name: "Jala Brat & Buba Corelli", date: "22.06.19", club: "Feeling"),
-        Event(name: "IAMFBB by D2", date: "26.01.19", club: "Imperio"),
-        Event(name: "Abrüsterparty", date: "27.06.19", club: "Empire St. Martin"),
-        Event(name: "Sturmfrei - School's Out", date: "28.06.19", club: "Evers"),
-        Event(name: "Med & Law Season Closing", date: "14.06.19", club: "Remembar")
+        Event(name: "Schere, STEIN, Papier!", date: "28.06.19", club: clubs[0].name, eventImage: UIImage(named: "event1.jpg")!, clubLogo: UIImage(named: "a1.jpg")!),
+        Event(name: "Jala Brat & Buba Corelli", date: "22.06.19", club: "Feeling", eventImage: UIImage(named: "event2.jpg")!, clubLogo: UIImage(named: "feeling.png")!),
+        Event(name: "IAMFBB by D2", date: "26.01.19", club: "Imperio", eventImage: UIImage(named: "event3.jpg")!, clubLogo: UIImage(named: "imperio.jpg")!),
+        Event(name: "Abrüsterparty", date: "27.06.19", club: "Empire St. Martin", eventImage: UIImage(named: "event4.jpg")!, clubLogo: UIImage(named: "empire.jpg")!),
+        Event(name: "Sturmfrei - School's Out", date: "28.06.19", club: "Evers", eventImage: UIImage(named: "event5.jpg")!, clubLogo: UIImage(named: "evers.jpg")!),
+        Event(name: "Med & Law Season Closing", date: "14.06.19", club: "Remembar", eventImage: UIImage(named: "event6.jpg")!, clubLogo: UIImage(named: "remembar.jpg")!)
     ]
     
+    static let myEvents: [Event] = [
+         Event(name: "IAMFBB by D2", date: "26.01.19", club: "Imperio", eventImage: UIImage(named: "event3.jpg")!, clubLogo: UIImage(named: "imperio.jpg")!),
+         Event(name: "Jala Brat & Buba Corelli", date: "22.06.19", club: "Feeling", eventImage: UIImage(named: "event2.jpg")!, clubLogo: UIImage(named: "feeling.png")!)
+    ]
+    
+    static let favoriteEvents: [Event] = [
+        Event(name: "Med & Law Season Closing", date: "14.06.19", club: "Remembar", eventImage: UIImage(named: "event6.jpg")!, clubLogo: UIImage(named: "remembar.jpg")!),
+        Event(name: "IAMFBB by D2", date: "26.01.19", club: "Imperio", eventImage: UIImage(named: "event3.jpg")!, clubLogo: UIImage(named: "imperio.jpg")!),
+         Event(name: "Schere, STEIN, Papier!", date: "28.06.19", club: clubs[0].name, eventImage: UIImage(named: "event1.jpg")!, clubLogo: UIImage(named: "a1.jpg")!)
+    ]
     
 }
