@@ -429,15 +429,18 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XVx-lT-hRS">
-                                                    <rect key="frame" x="191" y="287" width="61" height="62"/>
+                                                    <rect key="frame" x="226" y="286" width="50" height="50"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="62" id="MLp-bU-glq"/>
-                                                        <constraint firstAttribute="width" constant="61" id="vJW-sJ-kOd"/>
+                                                        <constraint firstAttribute="height" constant="50" id="MLp-bU-glq"/>
+                                                        <constraint firstAttribute="width" constant="50" id="vJW-sJ-kOd"/>
                                                     </constraints>
-                                                    <state key="normal" title="Button" image="heart.png">
+                                                    <state key="normal" title="Button" image="heartEmpty.png">
                                                         <color key="titleColor" red="0.94117647059999998" green="0.070588235289999995" blue="0.74509803919999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <color key="titleShadowColor" red="0.94117647059999998" green="0.070588235289999995" blue="0.74509803919999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="favoriteButtonPressed:" destination="F6x-hU-ZiO" eventType="touchUpInside" id="ikb-yr-vqJ"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </view>
@@ -447,17 +450,17 @@
                                             <constraint firstItem="fSo-nD-uOM" firstAttribute="centerX" secondItem="95X-cL-hGF" secondAttribute="centerX" id="AXi-WR-wdM"/>
                                             <constraint firstItem="dHu-sP-utZ" firstAttribute="leading" secondItem="xey-Xa-PIr" secondAttribute="leading" id="AsH-J6-sWn"/>
                                             <constraint firstItem="95X-cL-hGF" firstAttribute="top" secondItem="xey-Xa-PIr" secondAttribute="bottom" constant="14" id="B0v-uc-rrr"/>
-                                            <constraint firstItem="95X-cL-hGF" firstAttribute="top" secondItem="XVx-lT-hRS" secondAttribute="bottom" constant="87" id="I65-tW-gZI"/>
+                                            <constraint firstItem="95X-cL-hGF" firstAttribute="top" secondItem="XVx-lT-hRS" secondAttribute="bottom" constant="100" id="I65-tW-gZI"/>
                                             <constraint firstItem="qmF-gm-eaa" firstAttribute="top" secondItem="xey-Xa-PIr" secondAttribute="bottom" constant="43" id="KCz-g1-u39"/>
                                             <constraint firstAttribute="bottomMargin" secondItem="qmF-gm-eaa" secondAttribute="bottom" constant="59" id="Kfm-O4-Rb9"/>
                                             <constraint firstItem="fSo-nD-uOM" firstAttribute="leading" secondItem="F6x-hU-ZiO" secondAttribute="leadingMargin" constant="-8" id="UKN-ae-ieP"/>
-                                            <constraint firstItem="XVx-lT-hRS" firstAttribute="leading" secondItem="55f-rj-Gdq" secondAttribute="trailing" constant="73" id="UTS-eA-VnE"/>
                                             <constraint firstItem="fSo-nD-uOM" firstAttribute="centerX" secondItem="F6x-hU-ZiO" secondAttribute="centerX" id="ZfF-Em-dRs"/>
                                             <constraint firstItem="xey-Xa-PIr" firstAttribute="top" secondItem="55f-rj-Gdq" secondAttribute="bottom" constant="23" id="abh-g9-9Qp"/>
                                             <constraint firstItem="95X-cL-hGF" firstAttribute="leading" secondItem="qmF-gm-eaa" secondAttribute="leading" id="bqZ-a5-Ksz"/>
                                             <constraint firstItem="95X-cL-hGF" firstAttribute="trailing" secondItem="qmF-gm-eaa" secondAttribute="trailing" id="dKY-Hf-VZP"/>
                                             <constraint firstItem="55f-rj-Gdq" firstAttribute="leading" secondItem="dHu-sP-utZ" secondAttribute="leading" id="icE-F2-CFI"/>
                                             <constraint firstItem="dHu-sP-utZ" firstAttribute="top" secondItem="fSo-nD-uOM" secondAttribute="bottom" constant="57" id="jV7-0c-elb"/>
+                                            <constraint firstAttribute="trailing" secondItem="XVx-lT-hRS" secondAttribute="trailing" constant="40" id="m9u-Mz-IHK"/>
                                             <constraint firstItem="fSo-nD-uOM" firstAttribute="top" secondItem="F6x-hU-ZiO" secondAttribute="top" id="mec-Wb-DEO"/>
                                             <constraint firstItem="xey-Xa-PIr" firstAttribute="top" secondItem="dHu-sP-utZ" secondAttribute="bottom" constant="1" id="q7y-mz-bQU"/>
                                             <constraint firstItem="55f-rj-Gdq" firstAttribute="top" secondItem="fSo-nD-uOM" secondAttribute="bottom" constant="17" id="sxl-dB-FTW"/>
@@ -474,6 +477,7 @@
                                             <outlet property="clubName" destination="55f-rj-Gdq" id="bQd-K6-Iva"/>
                                             <outlet property="clubStreet" destination="95X-cL-hGF" id="7zu-5b-45D"/>
                                             <outlet property="clubType" destination="dHu-sP-utZ" id="Qik-vc-E3R"/>
+                                            <outlet property="favoriteButton" destination="XVx-lT-hRS" id="bOG-Pg-EjN"/>
                                             <outlet property="logoImage" destination="fSo-nD-uOM" id="Eds-SE-Jxq"/>
                                             <outlet property="ratingLabel" destination="xey-Xa-PIr" id="VuL-cI-M8N"/>
                                         </connections>
@@ -487,6 +491,7 @@
                                     <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="0.47629494863013699" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
+                                    <action selector="exitButtonPressed:" destination="Dka-zS-mRA" eventType="touchUpInside" id="pHE-3c-BXM"/>
                                     <segue destination="Ckb-Em-rvA" kind="show" id="8Yb-ov-YoU"/>
                                 </connections>
                             </button>
@@ -530,6 +535,7 @@
                     </view>
                     <connections>
                         <outlet property="clubsCollectionView" destination="iLn-eU-Efm" id="lpT-xY-9b2"/>
+                        <outlet property="exitButton" destination="aTu-5E-lf7" id="qWL-At-XRt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NKw-5B-DkP" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -564,6 +570,6 @@
         <image name="a1.jpg" width="180" height="180"/>
         <image name="applelogo.jpg" width="435" height="292.5"/>
         <image name="event3.jpg" width="960" height="508"/>
-        <image name="heart.png" width="409.60000610351562" height="409.60000610351562"/>
+        <image name="heartEmpty.png" width="409.60000610351562" height="409.60000610351562"/>
     </resources>
 </document>

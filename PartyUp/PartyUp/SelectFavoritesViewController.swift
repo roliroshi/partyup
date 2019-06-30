@@ -10,6 +10,12 @@ import UIKit
 
 class SelectFavoritesViewController: UIViewController {
     @IBOutlet weak var clubsCollectionView: UICollectionView!
+    @IBOutlet weak var exitButton: UIButton!
+    
+    var favoriteClubs: [Club] = []
+    
+    let defaults = UserDefaults.standard
+    
     let cellScale: CGFloat = 0.8
     
     var clubs: [Club] = DataManager.clubs
@@ -37,6 +43,16 @@ class SelectFavoritesViewController: UIViewController {
         clubsCollectionView.dataSource = self
         clubsCollectionView.delegate = self
     }
+    
+    @IBAction func exitButtonPressed(_ sender: Any) {
+        for cell in clubsCollectionView.visibleCells as! [ClubCell] {
+            if cell.fullHeart {
+                favoriteClubs.append(Club(name: cell.clubName.text!, type: cell.clubType.text!, rating: cell.ratingLabel.text!, street: cell.clubStreet.text!, city: cell.clubCity.text!, logo: UIImage(named: "applelogo.jpg")!))
+            }
+        }
+        print(favoriteClubs.count)
+    }
+    
     
     /*
     func loadClubs() {

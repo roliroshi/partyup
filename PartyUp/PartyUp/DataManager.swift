@@ -51,5 +51,5 @@ class DataManager{
         Event(name: "Med & Law Season Closing", date: "14.06.19", club: "Remembar")
     ]
     
-
+    
 }

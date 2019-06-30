@@ -30,6 +30,7 @@
 		F880DBFA22C788390093A901 /* Extensions+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F880DBF922C788390093A901 /* Extensions+UIView.swift */; };
 		F880DBFC22C789C40093A901 /* StretchyHeaderLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F880DBFB22C789C40093A901 /* StretchyHeaderLayout.swift */; };
 		F880DBFE22C7D43B0093A901 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F880DBFD22C7D43B0093A901 /* DataManager.swift */; };
+		F880DC0022C7D9CE0093A901 /* heartEmpty.png in Resources */ = {isa = PBXBuildFile; fileRef = F880DBFF22C7D9CE0093A901 /* heartEmpty.png */; };
 		F8A3FE1A2295508700FD2475 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A3FE192295508700FD2475 /* AppDelegate.swift */; };
 		F8A3FE1C2295508700FD2475 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A3FE1B2295508700FD2475 /* ViewController.swift */; };
 		F8A3FE1F2295508700FD2475 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8A3FE1D2295508700FD2475 /* Main.storyboard */; };
@@ -82,6 +83,7 @@
 		F880DBF922C788390093A901 /* Extensions+UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extensions+UIView.swift"; sourceTree = "<group>"; };
 		F880DBFB22C789C40093A901 /* StretchyHeaderLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StretchyHeaderLayout.swift; sourceTree = "<group>"; };
 		F880DBFD22C7D43B0093A901 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		F880DBFF22C7D9CE0093A901 /* heartEmpty.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heartEmpty.png; sourceTree = "<group>"; };
 		F8A3FE162295508700FD2475 /* PartyUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PartyUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8A3FE192295508700FD2475 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F8A3FE1B2295508700FD2475 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -184,6 +186,7 @@
 				F8A3FE1B2295508700FD2475 /* ViewController.swift */,
 				F8DCE82022C3AC9900410CAB /* BeFunky-photo.jpg */,
 				F8A3FE1D2295508700FD2475 /* Main.storyboard */,
+				F880DBFF22C7D9CE0093A901 /* heartEmpty.png */,
 				F880DBF522C77E950093A901 /* EventCollectionViewController.swift */,
 				F880DBFB22C789C40093A901 /* StretchyHeaderLayout.swift */,
 				F880DBF722C7819A0093A901 /* HeaderView.swift */,
@@ -316,6 +319,7 @@
 				7A98F3E422C66E53001B6CDE /* applelogo.jpg in Resources */,
 				F880DBF122C6AC950093A901 /* event6.jpg in Resources */,
 				F8A3FE1F2295508700FD2475 /* Main.storyboard in Resources */,
+				F880DC0022C7D9CE0093A901 /* heartEmpty.png in Resources */,
 				F869D0AE22C6728E00E2F650 /* remembar.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
