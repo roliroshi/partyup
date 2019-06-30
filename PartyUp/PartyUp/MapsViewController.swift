@@ -31,7 +31,7 @@ class MapsViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
         if CLLocationManager.locationServicesEnabled() {
             locationManager.delegate = self
             locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
-            locationManager.startUpdatingLocation()
+//            locationManager.startUpdatingLocation()
         }
         placesClient = GMSPlacesClient.shared()
         

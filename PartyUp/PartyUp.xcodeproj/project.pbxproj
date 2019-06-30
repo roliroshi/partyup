@@ -12,6 +12,8 @@
 		7A98F3E422C66E53001B6CDE /* applelogo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7A98F3E322C66E53001B6CDE /* applelogo.jpg */; };
 		7AA2339322C9069A00D30931 /* mapStyle.json in Resources */ = {isa = PBXBuildFile; fileRef = 7AA2339122C9069900D30931 /* mapStyle.json */; };
 		7AA2339422C9069A00D30931 /* MapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA2339222C9069A00D30931 /* MapsViewController.swift */; };
+		7AA2339822C9298E00D30931 /* CustomMarkerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA2339722C9298E00D30931 /* CustomMarkerView.swift */; };
+		7AA2339A22C92A0C00D30931 /* MapEventPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA2339922C92A0C00D30931 /* MapEventPreviewView.swift */; };
 		F84E71B322C4BB6B0059E1CA /* applelogo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F84E71B222C4BB6B0059E1CA /* applelogo.jpg */; };
 		F869D0A622C6728E00E2F650 /* a1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F869D09D22C6728E00E2F650 /* a1.jpg */; };
 		F869D0A722C6728E00E2F650 /* feeling.png in Resources */ = {isa = PBXBuildFile; fileRef = F869D09E22C6728E00E2F650 /* feeling.png */; };
@@ -69,6 +71,8 @@
 		7A98F3E322C66E53001B6CDE /* applelogo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = applelogo.jpg; sourceTree = "<group>"; };
 		7AA2339122C9069900D30931 /* mapStyle.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = mapStyle.json; sourceTree = "<group>"; };
 		7AA2339222C9069A00D30931 /* MapsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapsViewController.swift; sourceTree = "<group>"; };
+		7AA2339722C9298E00D30931 /* CustomMarkerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomMarkerView.swift; sourceTree = "<group>"; };
+		7AA2339922C92A0C00D30931 /* MapEventPreviewView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapEventPreviewView.swift; sourceTree = "<group>"; };
 		D8292A60442479084FE47192 /* libPods-PartyUp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PartyUp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F84E71B222C4BB6B0059E1CA /* applelogo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = applelogo.jpg; sourceTree = "<group>"; };
 		F869D09D22C6728E00E2F650 /* a1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = a1.jpg; sourceTree = "<group>"; };
@@ -211,6 +215,8 @@
 				7A2A67CB22C2CCB40089BE3B /* GradientView.swift */,
 				F8A3FE192295508700FD2475 /* AppDelegate.swift */,
 				7AA2339122C9069900D30931 /* mapStyle.json */,
+				7AA2339922C92A0C00D30931 /* MapEventPreviewView.swift */,
+				7AA2339722C9298E00D30931 /* CustomMarkerView.swift */,
 				7AA2339222C9069A00D30931 /* MapsViewController.swift */,
 				F8DCE81E22C3A70700410CAB /* heart.png */,
 				F8A3FE1B2295508700FD2475 /* ViewController.swift */,
@@ -418,12 +424,14 @@
 				F8A3FE3D22958F1600FD2475 /* EventCell.swift in Sources */,
 				7A2A67CC22C2CCB50089BE3B /* GradientView.swift in Sources */,
 				F8A3FE1C2295508700FD2475 /* ViewController.swift in Sources */,
+				7AA2339822C9298E00D30931 /* CustomMarkerView.swift in Sources */,
 				F8A3FE222295508700FD2475 /* PartyUp.xcdatamodeld in Sources */,
 				F880DBFC22C789C40093A901 /* StretchyHeaderLayout.swift in Sources */,
 				F880DBF822C7819A0093A901 /* HeaderView.swift in Sources */,
 				F8A3FE1A2295508700FD2475 /* AppDelegate.swift in Sources */,
 				7AA2339422C9069A00D30931 /* MapsViewController.swift in Sources */,
 				F8DCE81922C3565200410CAB /* SelectFavoritesViewController.swift in Sources */,
+				7AA2339A22C92A0C00D30931 /* MapEventPreviewView.swift in Sources */,
 				F880DBF622C77E950093A901 /* EventCollectionViewController.swift in Sources */,
 				F880DBFE22C7D43B0093A901 /* DataManager.swift in Sources */,
 				F8DCE81B22C3578600410CAB /* ClubCell.swift in Sources */,
