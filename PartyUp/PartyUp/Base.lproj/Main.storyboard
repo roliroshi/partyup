@@ -132,7 +132,7 @@
                                             <outlet property="date" destination="hBS-cQ-2pP" id="RcN-3b-kux"/>
                                             <outlet property="eventImage" destination="Jma-yp-Qal" id="pun-1R-AiA"/>
                                             <outlet property="eventName" destination="MpT-vh-l0n" id="sBc-N1-uFh"/>
-                                            <segue destination="2QU-gv-bfg" kind="show" identifier="toEventDetails" id="pWJ-iG-INR"/>
+                                            <segue destination="2QU-gv-bfg" kind="show" identifier="toEventDetails" id="XMt-OZ-15F"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -263,12 +263,15 @@
                         <viewLayoutGuide key="safeArea" id="JY7-z2-Wqq"/>
                     </view>
                     <connections>
+                        <outlet property="clubName" destination="z1v-S4-fRr" id="zyi-JH-n9N"/>
+                        <outlet property="clubRating" destination="vHa-Yl-gIt" id="bKF-KU-fc7"/>
+                        <outlet property="evenTitel" destination="ke0-yF-Kd1" id="ETm-Gy-4I6"/>
                         <outlet property="eventImage" destination="pC1-sT-3WV" id="Jpo-e5-VTU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BP1-IJ-u1K" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3884.057971014493" y="-607.36607142857144"/>
+            <point key="canvasLocation" x="3558" y="-697"/>
         </scene>
         <!--Event Collection View Controller-->
         <scene sceneID="C51-fB-IG2">
@@ -280,7 +283,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <collectionViewLayout key="collectionViewLayout" id="fje-1w-5Og" customClass="StretchyHeaderLayout" customModule="PartyUp" customModuleProvider="target"/>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="fullEventCell" id="ejE-fF-DFG">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="fullEventCell" id="ejE-fF-DFG" customClass="FullEventCell" customModule="PartyUp" customModuleProvider="target">
                                 <rect key="frame" x="-0.5" y="0.0" width="415" height="815"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -360,6 +363,10 @@
                                     <constraint firstItem="lyw-um-a3e" firstAttribute="leading" secondItem="uxy-SC-BBf" secondAttribute="leading" id="xe1-6e-2l6"/>
                                 </constraints>
                                 <size key="customSize" width="415" height="815"/>
+                                <connections>
+                                    <outlet property="clubName" destination="ipd-fj-AFf" id="G9s-Oc-ryD"/>
+                                    <outlet property="eventTitel" destination="igu-jd-w8Q" id="RJj-r4-ZNj"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
@@ -370,7 +377,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nba-xj-cJG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2863.768115942029" y="20.758928571428569"/>
+            <point key="canvasLocation" x="2804" y="21"/>
         </scene>
         <!--Map-->
         <scene sceneID="A9R-5A-el1">

@@ -112,5 +112,18 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate{
         performSegue(withIdentifier: "toEventDetails", sender: cell)
     }
     
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toEventDetails"{
+            let destinationVC = segue.destination as! EventCollectionViewController
+            print("hii")
+            if let cell = sender as? EventCell {
+                destinationVC.event = Event(name: cell.eventName.text!, date: cell.date.text!, club: cell.clubName.text!, eventImage: cell.eventImage.image!, clubLogo: cell.clubLogo.image!)
+            }
+            
+            
+        }
+    } 
+    
 }
 
