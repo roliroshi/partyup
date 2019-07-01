@@ -202,6 +202,12 @@ class EventCollectionViewController: UICollectionViewController, UICollectionVie
         } catch {
             NSLog("One or more of the map styles failed to load. \(error)")
         }
+        let marker = GMSMarker()
+        marker.position = CLLocationCoordinate2D(latitude: event.club.latitude, longitude: event.club.longitude)
+        marker.title = event.name
+        marker.snippet = event.club.name
+        marker.icon = GMSMarker.markerImage(with: UIColor(rgb: 0x9D00A6).withAlphaComponent(0.8))
+        marker.map = map
         return map
     }
     
