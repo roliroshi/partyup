@@ -53,6 +53,10 @@ class SelectFavoritesViewController: UIViewController {
         print(favoriteClubs.count)
     }
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     
     /*
     func loadClubs() {

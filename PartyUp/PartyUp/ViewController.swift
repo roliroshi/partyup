@@ -82,6 +82,14 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate{
         return events.count
     }
     
+    fileprivate func extractedFunc(_ cell: EventCell) {
+        cell.clubLogo.layer.borderWidth = 2
+        cell.clubLogo.layer.masksToBounds = false
+        cell.clubLogo.layer.borderColor = UIColor.white.cgColor
+        cell.clubLogo.layer.cornerRadius = cell.clubLogo.frame.height/2
+        cell.clubLogo.clipsToBounds = true
+    }
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "eventCell", for: indexPath) as! EventCell
         
@@ -92,11 +100,7 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate{
         cell.eventImage.image = events[indexPath.row].eventImage
         
         
-        cell.clubLogo.layer.borderWidth = 2
-        cell.clubLogo.layer.masksToBounds = false
-        cell.clubLogo.layer.borderColor = UIColor.white.cgColor
-        cell.clubLogo.layer.cornerRadius = cell.clubLogo.frame.height/2
-        cell.clubLogo.clipsToBounds = true
+        extractedFunc(cell)
         return cell
     }
     
