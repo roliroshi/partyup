@@ -20,19 +20,20 @@ class ClubCell: UICollectionViewCell{
     @IBOutlet weak var clubCity: UILabel!
     @IBOutlet weak var favoriteButton: UIButton!
     
-    var fullHeart: Bool = false
-
+    var link: SelectFavoritesViewController?
+    var fullHeart = false
     
-    @IBAction func favoriteButtonPressed(_ sender: Any) {
-        
-        if !fullHeart {
-            print("funktioniert")
-            favoriteButton.setImage(UIImage(named: "heart.png"), for: .normal)
-            fullHeart = true
-        }
-        else{
-            favoriteButton.setImage(UIImage(named: "heartEmpty.png"), for: .normal)
-            fullHeart = false
-        }
+    @IBAction func favoriteButtonPressed(_ sender: UIButton) {
+        link?.favouriteActuallCell(cell: self)
+//
+//        if !fullHeart {
+//            print("funktioniert")
+//
+//            self.fullHeart = true
+//        }
+//        else{
+//            sender.setImage(UIImage(named: "heartEmpty.png"), for: .normal)
+//            self.fullHeart = false
+//        }
     }
 }

@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14810.11" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Dka-zS-mRA">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Dka-zS-mRA">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14766.13"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -13,7 +15,7 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PartyUp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="What's up?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VV0-hO-FbK">
@@ -130,7 +132,7 @@
                                             <outlet property="date" destination="hBS-cQ-2pP" id="RcN-3b-kux"/>
                                             <outlet property="eventImage" destination="Jma-yp-Qal" id="pun-1R-AiA"/>
                                             <outlet property="eventName" destination="MpT-vh-l0n" id="sBc-N1-uFh"/>
-                                            <segue destination="2QU-gv-bfg" kind="showDetail" identifier="toEventDetails" id="XMt-OZ-15F"/>
+                                            <segue destination="2QU-gv-bfg" kind="show" identifier="toEventDetails" id="XMt-OZ-15F"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -276,16 +278,16 @@
             <objects>
                 <collectionViewController id="2QU-gv-bfg" customClass="EventCollectionViewController" customModule="PartyUp" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="1Qd-iF-2lE">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <collectionViewLayout key="collectionViewLayout" id="fje-1w-5Og" customClass="StretchyHeaderLayout" customModule="PartyUp" customModuleProvider="target"/>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="fullEventCell" id="ejE-fF-DFG" customClass="FullEventCell" customModule="PartyUp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="815"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="815"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Eintritt: 12€" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uxy-SC-BBf">
@@ -324,17 +326,13 @@
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="mrG-zk-BRo">
-                                            <rect key="frame" x="36" y="277" width="0.0" height="676"/>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fuZ-rB-mXT">
+                                            <rect key="frame" x="0.0" y="276" width="414" height="200"/>
+                                            <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="676" id="agp-sx-Vp9"/>
+                                                <constraint firstAttribute="height" constant="200" id="uPi-FE-fQ3"/>
                                             </constraints>
-                                            <userDefinedRuntimeAttributes>
-                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                    <integer key="value" value="10"/>
-                                                </userDefinedRuntimeAttribute>
-                                            </userDefinedRuntimeAttributes>
-                                        </mapView>
+                                        </view>
                                     </subviews>
                                 </view>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -345,13 +343,12 @@
                                     <constraint firstItem="igu-jd-w8Q" firstAttribute="top" secondItem="ejE-fF-DFG" secondAttribute="top" constant="20" id="9tO-66-IQB"/>
                                     <constraint firstItem="lyw-um-a3e" firstAttribute="leading" secondItem="ejE-fF-DFG" secondAttribute="leading" constant="36" id="Drf-l9-PeR"/>
                                     <constraint firstItem="uxy-SC-BBf" firstAttribute="leading" secondItem="SPW-P7-jh7" secondAttribute="leading" id="EOK-xK-nmL"/>
-                                    <constraint firstItem="mrG-zk-BRo" firstAttribute="leading" secondItem="ejE-fF-DFG" secondAttribute="leading" constant="36" id="IBw-E9-ahi"/>
-                                    <constraint firstAttribute="trailing" secondItem="mrG-zk-BRo" secondAttribute="trailing" constant="36" id="JrZ-1y-98k"/>
+                                    <constraint firstItem="fuZ-rB-mXT" firstAttribute="leading" secondItem="ejE-fF-DFG" secondAttribute="leadingMargin" constant="-8" id="Fxx-bU-Vf1"/>
                                     <constraint firstItem="ipd-fj-AFf" firstAttribute="leading" secondItem="ejE-fF-DFG" secondAttribute="leading" constant="36" id="MtT-V5-HNU"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="fuZ-rB-mXT" secondAttribute="trailing" constant="-8" id="RIC-ec-md2"/>
+                                    <constraint firstItem="fuZ-rB-mXT" firstAttribute="top" secondItem="kjF-Kn-8wX" secondAttribute="bottom" constant="30" id="RmA-Jj-zJX"/>
                                     <constraint firstItem="SPW-P7-jh7" firstAttribute="top" secondItem="uxy-SC-BBf" secondAttribute="bottom" constant="8" symbolic="YES" id="fO7-77-b6U"/>
-                                    <constraint firstItem="mrG-zk-BRo" firstAttribute="centerX" secondItem="ejE-fF-DFG" secondAttribute="centerX" id="fUz-Mh-UNr"/>
                                     <constraint firstItem="lyw-um-a3e" firstAttribute="top" secondItem="ipd-fj-AFf" secondAttribute="bottom" constant="8" symbolic="YES" id="hme-7b-cLk"/>
-                                    <constraint firstItem="mrG-zk-BRo" firstAttribute="top" secondItem="kjF-Kn-8wX" secondAttribute="bottom" constant="31" id="iIE-xZ-F9F"/>
                                     <constraint firstItem="lyw-um-a3e" firstAttribute="top" secondItem="ipd-fj-AFf" secondAttribute="bottom" constant="8" id="jtU-n5-BB4"/>
                                     <constraint firstItem="SPW-P7-jh7" firstAttribute="leading" secondItem="kjF-Kn-8wX" secondAttribute="leading" id="kmv-Aq-O69"/>
                                     <constraint firstItem="kjF-Kn-8wX" firstAttribute="top" secondItem="SPW-P7-jh7" secondAttribute="bottom" constant="8" symbolic="YES" id="oN8-Bt-aDk"/>
@@ -360,10 +357,11 @@
                                     <constraint firstItem="igu-jd-w8Q" firstAttribute="leading" secondItem="ipd-fj-AFf" secondAttribute="leading" id="vE0-ch-Xtj"/>
                                     <constraint firstItem="lyw-um-a3e" firstAttribute="leading" secondItem="uxy-SC-BBf" secondAttribute="leading" id="xe1-6e-2l6"/>
                                 </constraints>
-                                <size key="customSize" width="415" height="815"/>
+                                <size key="customSize" width="414" height="815"/>
                                 <connections>
                                     <outlet property="clubName" destination="ipd-fj-AFf" id="G9s-Oc-ryD"/>
                                     <outlet property="eventTitel" destination="igu-jd-w8Q" id="RJj-r4-ZNj"/>
+                                    <outlet property="mapView" destination="fuZ-rB-mXT" id="PUX-cX-he4"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -376,14 +374,14 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nba-xj-cJG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2804" y="21"/>
+            <point key="canvasLocation" x="2802.898550724638" y="20.758928571428569"/>
         </scene>
         <!--Map-->
         <scene sceneID="A9R-5A-el1">
             <objects>
                 <viewController id="u0O-gV-Rgh" customClass="MapsViewController" customModule="PartyUp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Xjr-GH-qLk">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.16469594836235046" green="0.16078397631645203" blue="0.16078433394432068" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="eWN-UG-sHC"/>
@@ -475,7 +473,7 @@
                                                         <color key="titleShadowColor" red="0.94117647059999998" green="0.070588235289999995" blue="0.74509803919999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </state>
                                                     <connections>
-                                                        <action selector="favoriteButtonPressed:" destination="F6x-hU-ZiO" eventType="touchUpInside" id="ikb-yr-vqJ"/>
+                                                        <action selector="favoriteButtonPressed:" destination="F6x-hU-ZiO" eventType="touchUpInside" id="oYi-mD-DHi"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -587,13 +585,12 @@
                     </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" hidden="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="LU9-2u-col">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="0.94117647059999998" green="0.070588235289999995" blue="0.74509803919999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="xzi-QE-McV">
-                        <rect key="frame" x="0.0" y="-54" width="0.0" height="0.0"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </toolbar>
                     <connections>

@@ -8,23 +8,25 @@
 
 import UIKit
 
+struct ClubsCollection {
+    var hasFavorited: Bool
+    let club: Club
+}
+
 class SelectFavoritesViewController: UIViewController {
     @IBOutlet weak var clubsCollectionView: UICollectionView!
     @IBOutlet weak var exitButton: UIButton!
     
-    var favoriteClubs: [Club] = []
+    var clubs: [ClubsCollection] = []
     
     let defaults = UserDefaults.standard
     
     let cellScale: CGFloat = 0.8
     
-    var clubs: [Club] = DataManager.clubs
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-       // loadClubs()
+        DataManager.clubs.forEach{ clubs.append(ClubsCollection(hasFavorited: false, club: $0))}
         
         /*
         let layout = clubsCollectionView!.collectionViewLayout as! UICollectionViewFlowLayout
@@ -42,37 +44,24 @@ class SelectFavoritesViewController: UIViewController {
         
         clubsCollectionView.dataSource = self
         clubsCollectionView.delegate = self
+        clubsCollectionView.reloadData()
     }
     
     @IBAction func exitButtonPressed(_ sender: Any) {
-        for cell in clubsCollectionView.visibleCells as! [ClubCell] {
-            if cell.fullHeart {
-                favoriteClubs.append(DataManager.clubs.filter{$0.name == cell.clubName.text}.first!)
-            }
-        }
-        print(favoriteClubs.count)
+        print(clubs.filter{$0.hasFavorited}.count)
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
     
-    
-    /*
-    func loadClubs() {
-        self.clubs = [
-            Club(name: "Musikpark A1", type: "Club", rating: "★ 4.7", street: "Hamerlingstraße 42", city: "4020 Linz", logo: UIImage(named: "a1.jpg") ?? UIImage(named: "applelogo.jpg")!),
-            Club(name: "Imperio", type: "Club", rating: "★ 5.0", street: "Eduard-Sueß-Straße 19", city: "4030 Linz", logo: UIImage(named: "imperio.jpg")!),
-            Club(name: "Spielplatz", type: "Club", rating: "★ 3.9", street: "Hauptstraße 4", city: "4040 Linz", logo: UIImage(named: "spielplatz.png") ?? UIImage(named: "applelogo.jpg")!),
-            Club(name: "Feeling", type: "Club", rating: "★ 3.6", street: "Wiesenstraße 60 A", city: "4600 Wels", logo: UIImage(named: "feeling.png") ?? UIImage(named: "applelogo.jpg")!),
-            Club(name: "Empire St. Martin", type: "Club", rating: "★ 4.1", street: "Allersdorf 20", city: "4113 Sankt Martin/Mühlkreis", logo: UIImage(named: "empire.jpg") ?? UIImage(named: "applelogo.jpg")!),
-            Club(name: "Segabar", type: "Bar", rating: "★ 3.9", street: " Hofgasse 9", city: "4020 Linz", logo: UIImage(named: "segabar.png") ?? UIImage(named: "empire.jpg")!),
-            Club(name: "Remembar", type: "Bar", rating: "★ 3.4", street: "Landstraße 17-25", city: "4020 Linz", logo: UIImage(named: "remembar.jpg") ?? UIImage(named: "empire.jpg")!),
-            Club(name: "Evers", type: "Club", rating: "★ 4.0", street: "Betriebsstraße 15", city: "4210 Radingdorf", logo: UIImage(named: "evers.jpg") ?? UIImage(named: "empire.jpg")!),
-            Club(name: "Mausefalle", type: "Bar", rating: "★ 4.0", street: "Wegscheider Str. 3", city: "4020 Linz", logo: UIImage(named: "mausefalle.jpg") ?? UIImage(named: "empire.jpg")!)
-        ]
-    } */
-    
+    func favouriteActuallCell(cell: ClubCell) {
+        if let index = clubsCollectionView.indexPath(for: cell) {
+            let currentClub = clubs[(index.row)]
+            clubs[(index.row)].hasFavorited = !currentClub.hasFavorited
+            clubsCollectionView.reloadItems(at: [index])
+        }
+    }
 }
 
 extension SelectFavoritesViewController: UICollectionViewDataSource{
@@ -82,15 +71,20 @@ extension SelectFavoritesViewController: UICollectionViewDataSource{
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "clubCell", for: indexPath) as! ClubCell
+        cell.link = self
         cell.layer.cornerRadius = 49
         
-        cell.clubName.text = clubs[indexPath.row].name
-        cell.clubType.text = clubs[indexPath.row].type
-        cell.ratingLabel.text = clubs[indexPath.row].rating
-        cell.clubStreet.text = clubs[indexPath.row].street
-        cell.clubCity.text = clubs[indexPath.row].city
-        cell.logoImage.image = clubs[indexPath.row].logo
-        
+        cell.clubName.text = clubs[indexPath.row].club.name
+        cell.clubType.text = clubs[indexPath.row].club.type
+        cell.ratingLabel.text = clubs[indexPath.row].club.rating
+        cell.clubStreet.text = clubs[indexPath.row].club.street
+        cell.clubCity.text = clubs[indexPath.row].club.city
+        cell.logoImage.image = clubs[indexPath.row].club.logo
+        if clubs[indexPath.row].hasFavorited {
+            cell.favoriteButton.setImage(UIImage(named: "heart.png"), for: .normal)
+        } else {
+            cell.favoriteButton.setImage(UIImage(named: "heartEmpty.png"), for: .normal)
+        }
         return cell
     }
     

@@ -7,11 +7,12 @@
 //
 
 import UIKit
+import GoogleMaps
 
 class FullEventCell: UICollectionViewCell {
     
+    @IBOutlet weak var mapView: UIView!
     @IBOutlet weak var eventTitel: UILabel!
     @IBOutlet weak var clubName: UILabel!
-    
     
 }

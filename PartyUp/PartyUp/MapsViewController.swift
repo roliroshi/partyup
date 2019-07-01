@@ -83,6 +83,10 @@ class MapsViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
         showPartyMarkers()
     }
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let location: CLLocation = locations.last!
 

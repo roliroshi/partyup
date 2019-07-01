@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import GoogleMaps
 
-class EventCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout{
+class EventCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout, GMSMapViewDelegate{
     
     fileprivate let cellId = "cellId"
     fileprivate let headerId = "headerId"
@@ -18,7 +19,6 @@ class EventCollectionViewController: UICollectionViewController, UICollectionVie
     var eventImage: UIImageView!
     
     var event: Event?
-  
 
     
     
@@ -185,9 +185,25 @@ class EventCollectionViewController: UICollectionViewController, UICollectionVie
         cell.eventTitel.text = event?.name
         cell.clubName.text = event?.club.name
         //eventImage.image = event?.eventImage
+        cell.mapView.addSubview(loadGoogleMap(event: event!))
         return cell
     }
     
+    func loadGoogleMap(event: Event) -> GMSMapView {
+        let camera = GMSCameraPosition.camera(withLatitude: event.club.latitude, longitude: event.club.longitude, zoom: 16)
+        let map = GMSMapView.map(withFrame: view.bounds, camera: camera)
+        do {
+            // Set the map style by passing the URL of the local file.
+            if let styleURL = Bundle.main.url(forResource: "mapStyle", withExtension: "json") {
+                map.mapStyle = try GMSMapStyle(contentsOfFileURL: styleURL)
+            } else {
+                NSLog("Unable to find style.json")
+            }
+        } catch {
+            NSLog("One or more of the map styles failed to load. \(error)")
+        }
+        return map
+    }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return .init(width: view.frame.width, height: 1000)
