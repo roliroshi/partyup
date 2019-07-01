@@ -11,6 +11,24 @@ import GoogleMaps
 import CoreLocation
 import GooglePlaces
 
+extension UIColor {
+    convenience init(red: Int, green: Int, blue: Int) {
+        assert(red >= 0 && red <= 255, "Invalid red component")
+        assert(green >= 0 && green <= 255, "Invalid green component")
+        assert(blue >= 0 && blue <= 255, "Invalid blue component")
+        
+        self.init(red: CGFloat(red) / 255.0, green: CGFloat(green) / 255.0, blue: CGFloat(blue) / 255.0, alpha: 1.0)
+    }
+    
+    convenience init(rgb: Int) {
+        self.init(
+            red: (rgb >> 16) & 0xFF,
+            green: (rgb >> 8) & 0xFF,
+            blue: rgb & 0xFF
+        )
+    }
+}
+
 class MapsViewController: UIViewController, CLLocationManagerDelegate, GMSMapViewDelegate {
     
     var mapEventPreviewView = MapEventPreviewView()
@@ -71,7 +89,6 @@ class MapsViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
         let camera = GMSCameraPosition.camera(withLatitude: location.coordinate.latitude, longitude: location.coordinate.longitude, zoom: zoomLevel)
         
         self.mapView.animate(to: camera)
-        listLikelyPlaces()
     }
     
     func didTapMyLocationButton(for mapView: GMSMapView) -> Bool {
@@ -85,36 +102,21 @@ class MapsViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
         }
     }
     
+    func mapView(_ mapView: GMSMapView, markerInfoContents marker: GMSMarker) -> UIView? {
+        guard let customMarkerView = marker.iconView as? CustomMarkerView else { return nil }
+        let data = DataManager.events.filter{$0.id == customMarkerView.tag}.first!
+        mapEventPreviewView.setData(event: data)
+        return mapEventPreviewView
+    }
+
     func showPartyMarkers() {
         mapView.clear()
         for event in DataManager.events {
             let marker = GMSMarker()
-            let customMarker = CustomMarkerView(frame: CGRect(x: 0, y: 0, width: customMarkerWidth, height: customMarkerHeight), image: event.club.logo, borderColor: UIColor.darkGray, tag: event.id)
+            let customMarker = CustomMarkerView(frame: CGRect(x: 0, y: 0, width: customMarkerWidth, height: customMarkerHeight), image: event.club.logo, borderColor: UIColor(rgb: 0x9D00A6).withAlphaComponent(0.8), tag: event.id)
             marker.iconView = customMarker
             marker.position = CLLocationCoordinate2D(latitude: event.club.latitude, longitude: event.club.longitude)
             marker.map = self.mapView
         }
-    }
-    
-    // Populate the array with the list of likely places.
-    func listLikelyPlaces() {
-        // Clean up from previous sessions.
-        likelyPlaces.removeAll()
-        
-        placesClient.currentPlace(callback: { (placeLikelihoods, error) -> Void in
-            if let error = error {
-                // TODO: Handle the error.
-                print("Current Place error: \(error.localizedDescription)")
-                return
-            }
-            
-            // Get likely places and add to the list.
-            if let likelihoodList = placeLikelihoods {
-                for likelihood in likelihoodList.likelihoods {
-                    let place = likelihood.place
-                    self.likelyPlaces.append(place)
-                }
-            }
-        })
     }
 }
