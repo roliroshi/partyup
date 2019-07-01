@@ -30,9 +30,10 @@ class EventCollectionViewController: UICollectionViewController, UICollectionVie
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       //headerView?.imageView.image = event?.eventImage
+       
         setupLayout()
         setupCollectionView()
+        
     }
     
     override func viewWillDisappear(_ animated: Bool) {
