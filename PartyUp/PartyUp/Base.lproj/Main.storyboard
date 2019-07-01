@@ -327,16 +327,27 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fuZ-rB-mXT">
-                                            <rect key="frame" x="0.0" y="276" width="414" height="200"/>
+                                            <rect key="frame" x="0.0" y="325" width="414" height="200"/>
                                             <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="200" id="uPi-FE-fQ3"/>
                                             </constraints>
                                         </view>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bhh-WB-hTx">
+                                            <rect key="frame" x="36" y="256" width="109" height="39"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                            <state key="normal" title="Teilnehmen">
+                                                <color key="titleColor" red="0.94117647059999998" green="0.070588235289999995" blue="0.74509803919999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="participateBtnPressed:" destination="ejE-fF-DFG" eventType="touchUpInside" id="S8A-FR-LJP"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                 </view>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
+                                    <constraint firstItem="Bhh-WB-hTx" firstAttribute="leading" secondItem="kjF-Kn-8wX" secondAttribute="leading" id="0zb-o6-qJ1"/>
                                     <constraint firstItem="ipd-fj-AFf" firstAttribute="top" secondItem="igu-jd-w8Q" secondAttribute="bottom" constant="2" id="71S-Ph-730"/>
                                     <constraint firstItem="ipd-fj-AFf" firstAttribute="leading" secondItem="lyw-um-a3e" secondAttribute="leading" id="8Gc-GF-2xW"/>
                                     <constraint firstItem="ipd-fj-AFf" firstAttribute="top" secondItem="igu-jd-w8Q" secondAttribute="bottom" constant="2" id="8gA-OK-Lrq"/>
@@ -346,7 +357,8 @@
                                     <constraint firstItem="fuZ-rB-mXT" firstAttribute="leading" secondItem="ejE-fF-DFG" secondAttribute="leadingMargin" constant="-8" id="Fxx-bU-Vf1"/>
                                     <constraint firstItem="ipd-fj-AFf" firstAttribute="leading" secondItem="ejE-fF-DFG" secondAttribute="leading" constant="36" id="MtT-V5-HNU"/>
                                     <constraint firstAttribute="trailingMargin" secondItem="fuZ-rB-mXT" secondAttribute="trailing" constant="-8" id="RIC-ec-md2"/>
-                                    <constraint firstItem="fuZ-rB-mXT" firstAttribute="top" secondItem="kjF-Kn-8wX" secondAttribute="bottom" constant="30" id="RmA-Jj-zJX"/>
+                                    <constraint firstItem="fuZ-rB-mXT" firstAttribute="top" secondItem="Bhh-WB-hTx" secondAttribute="bottom" constant="30" id="RmA-Jj-zJX"/>
+                                    <constraint firstItem="Bhh-WB-hTx" firstAttribute="top" secondItem="kjF-Kn-8wX" secondAttribute="bottom" constant="10" id="bbc-Da-X5O"/>
                                     <constraint firstItem="SPW-P7-jh7" firstAttribute="top" secondItem="uxy-SC-BBf" secondAttribute="bottom" constant="8" symbolic="YES" id="fO7-77-b6U"/>
                                     <constraint firstItem="lyw-um-a3e" firstAttribute="top" secondItem="ipd-fj-AFf" secondAttribute="bottom" constant="8" symbolic="YES" id="hme-7b-cLk"/>
                                     <constraint firstItem="lyw-um-a3e" firstAttribute="top" secondItem="ipd-fj-AFf" secondAttribute="bottom" constant="8" id="jtU-n5-BB4"/>

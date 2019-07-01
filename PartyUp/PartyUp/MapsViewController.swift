@@ -106,12 +106,12 @@ class MapsViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
         }
     }
     
-    func mapView(_ mapView: GMSMapView, markerInfoContents marker: GMSMarker) -> UIView? {
-        guard let customMarkerView = marker.iconView as? CustomMarkerView else { return nil }
-        let data = DataManager.events.filter{$0.id == customMarkerView.tag}.first!
-        mapEventPreviewView.setData(event: data)
-        return mapEventPreviewView
-    }
+//    func mapView(_ mapView: GMSMapView, markerInfoContents marker: GMSMarker) -> UIView? {
+//        guard let customMarkerView = marker.iconView as? CustomMarkerView else { return nil }
+//        let data = DataManager.events.filter{$0.id == customMarkerView.tag}.first!
+//        mapEventPreviewView.setData(event: data)
+//        return mapEventPreviewView
+//    }
 
     func showPartyMarkers() {
         mapView.clear()

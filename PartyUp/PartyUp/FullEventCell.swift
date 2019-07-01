@@ -15,4 +15,11 @@ class FullEventCell: UICollectionViewCell {
     @IBOutlet weak var eventTitel: UILabel!
     @IBOutlet weak var clubName: UILabel!
     
+    @IBAction func participateBtnPressed(_ sender: UIButton) {
+        if sender.titleLabel?.text == "Teilnehmen" {
+            sender.setTitle("Nicht mehr teilnehmen", for: .normal)
+        } else {
+            sender.setTitle("Teilnehmen", for: .normal)
+        }
+    }
 }
